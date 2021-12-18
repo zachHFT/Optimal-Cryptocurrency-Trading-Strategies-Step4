@@ -1,0 +1,4933 @@
+Creator "igraph version 1.2.8 Tue Nov 16 15:00:25 2021"
+Version 1
+graph
+[
+  directed 1
+  node
+  [
+    id 0
+    label "Bitcoin_is_plan_A"
+    names "Bitcoin_is_plan_A"
+    IVIcentrality 9.33933024999452
+    x -60.3537884662801
+    y 40.6051021934957
+  ]
+  node
+  [
+    id 1
+    label "crypto_crypto_guy"
+    names "crypto_crypto_guy"
+    IVIcentrality 1.349261689101
+    x -98.62001069712
+    y 14.832937192365
+  ]
+  node
+  [
+    id 2
+    label "tnethacker"
+    names "tnethacker"
+    IVIcentrality 1.40562525756663
+    x -98.0216103901933
+    y 18.0644563117417
+  ]
+  node
+  [
+    id 3
+    label "FadedCrown95"
+    names "FadedCrown95"
+    IVIcentrality 1.36487724751209
+    x -99.5149293797006
+    y 6.289110413986
+  ]
+  node
+  [
+    id 10
+    label "knight108"
+    names "knight108"
+    IVIcentrality 1.2773996331815
+    x 52.8992461923815
+    y 84.6291189031792
+  ]
+  node
+  [
+    id 12
+    label "shleebs"
+    names "shleebs"
+    IVIcentrality 1.14348509196796
+    x 40.2868113840074
+    y 91.4572645843946
+  ]
+  node
+  [
+    id 13
+    label "50mm-f2"
+    names "50mm-f2"
+    IVIcentrality 1.16463670113877
+    x 38.7092030803366
+    y 92.1128795742017
+  ]
+  node
+  [
+    id 21
+    label "zcpu"
+    names "zcpu"
+    IVIcentrality 2.98812706493578
+    x -96.1868922716317
+    y -21.3336320155087
+  ]
+  node
+  [
+    id 22
+    label "llewsor"
+    names "llewsor"
+    IVIcentrality 4.19963368140147
+    x -24.5206846609285
+    y 28.2173553516948
+  ]
+  node
+  [
+    id 30
+    label "smeggletoot"
+    names "smeggletoot"
+    IVIcentrality 1.96340052687127
+    x -79.8832939096125
+    y -58.6611707424249
+  ]
+  node
+  [
+    id 52
+    label "Pupulikjan"
+    names "Pupulikjan"
+    IVIcentrality 5.45794622575456
+    x -47.0903009361166
+    y -83.1697487201145
+  ]
+  node
+  [
+    id 53
+    label "BashCo"
+    names "BashCo"
+    IVIcentrality 5.00306669819547
+    x -60.14541507178
+    y -74.8688550671119
+  ]
+  node
+  [
+    id 54
+    label "ILikePracticalGifts"
+    names "ILikePracticalGifts"
+    IVIcentrality 1.13158707964429
+    x -56.126240739441
+    y -82.7025257830595
+  ]
+  node
+  [
+    id 63
+    label "PsychologicalKiwi547"
+    names "PsychologicalKiwi547"
+    IVIcentrality 1.86492149687574
+    x 57.0591473374383
+    y 81.1570749729471
+  ]
+  node
+  [
+    id 65
+    label "poomata"
+    names "poomata"
+    IVIcentrality 1.16266210684216
+    x 32.5611552082638
+    y 94.4635118035268
+  ]
+  node
+  [
+    id 69
+    label "coinfeeds-bot"
+    names "coinfeeds-bot"
+    IVIcentrality 1.70685953748605
+    x 59.0609053994132
+    y 79.9109315024462
+  ]
+  node
+  [
+    id 73
+    label "nakasatamooshito"
+    names "nakasatamooshito"
+    IVIcentrality 6.08304839564577
+    x -49.2317644308371
+    y -81.182146134108
+  ]
+  node
+  [
+    id 82
+    label "hyperinflationUSA"
+    names "hyperinflationUSA"
+    IVIcentrality 1.58052425638461
+    x 78.1131272975688
+    y 61.6253597569076
+  ]
+  node
+  [
+    id 85
+    label "LeslieMarston"
+    names "LeslieMarston"
+    IVIcentrality 1.17074799113535
+    x 79.091197266178
+    y 61.045335276522
+  ]
+  node
+  [
+    id 104
+    label "simplelifestyle"
+    names "simplelifestyle"
+    IVIcentrality 21.0878385312981
+    x -64.2683292181252
+    y 3.44186166809305
+  ]
+  node
+  [
+    id 115
+    label "NeedleworkerNo2874"
+    names "NeedleworkerNo2874"
+    IVIcentrality 7.46912580799066
+    x -35.6620698777185
+    y -5.8489484632576
+  ]
+  node
+  [
+    id 116
+    label "customtoggle"
+    names "customtoggle"
+    IVIcentrality 1.21933136217188
+    x -95.8033642996139
+    y 28.1754185787153
+  ]
+  node
+  [
+    id 122
+    label "Far_Bass_7284"
+    names "Far_Bass_7284"
+    IVIcentrality 1.32665397429244
+    x -73.5240951142525
+    y -67.4143092787772
+  ]
+  node
+  [
+    id 135
+    label "idrinkforbadges"
+    names "idrinkforbadges"
+    IVIcentrality 5.90949730790506
+    x -8.56140313417521
+    y 44.7343511407626
+  ]
+  node
+  [
+    id 146
+    label "anonymousoctopus777"
+    names "anonymousoctopus777"
+    IVIcentrality 1.32084916006508
+    x -89.4965668286122
+    y -44.0683215558692
+  ]
+  node
+  [
+    id 147
+    label "soarky325"
+    names "soarky325"
+    IVIcentrality 1.23905896198468
+    x -88.0477803722391
+    y -47.0716952825668
+  ]
+  node
+  [
+    id 155
+    label "CoinCorner_Sam"
+    names "CoinCorner_Sam"
+    IVIcentrality 13.1764355856933
+    x -9.46475869229332
+    y -63.658433724995
+  ]
+  node
+  [
+    id 177
+    label "alc0tt"
+    names "alc0tt"
+    IVIcentrality 1.17933807262288
+    x -99.8647449356243
+    y 2.69221256671745
+  ]
+  node
+  [
+    id 180
+    label "Mr_YUP"
+    names "Mr_YUP"
+    IVIcentrality 1.19357915219493
+    x -99.301334870599
+    y 10.7974017021508
+  ]
+  node
+  [
+    id 203
+    label "castorfromtheva"
+    names "castorfromtheva"
+    IVIcentrality 3.28985806728065
+    x -69.8571219072407
+    y 68.3992227707838
+  ]
+  node
+  [
+    id 210
+    label "JunoKat"
+    names "JunoKat"
+    IVIcentrality 2.06436588816168
+    x -88.0222419664105
+    y 45.3247957875133
+  ]
+  node
+  [
+    id 214
+    label "fjjjfjfnfnfng"
+    names "fjjjfjfnfnfng"
+    IVIcentrality 1.37856107245691
+    x -99.6993012316467
+    y -0.254649164362144
+  ]
+  node
+  [
+    id 268
+    label "ohnoh18"
+    names "ohnoh18"
+    IVIcentrality 1.44527828563571
+    x -55.3173984597048
+    y 82.8646890256661
+  ]
+  node
+  [
+    id 273
+    label "TheFutureofMoney"
+    names "TheFutureofMoney"
+    IVIcentrality 1.12941845798771
+    x -46.7543311038493
+    y 88.3421385408864
+  ]
+  node
+  [
+    id 277
+    label "Traditional-War-1655"
+    names "Traditional-War-1655"
+    IVIcentrality 1.09517152522472
+    x -68.2875959715218
+    y 73.0344251928259
+  ]
+  node
+  [
+    id 279
+    label "Some1fromReddit"
+    names "Some1fromReddit"
+    IVIcentrality 1.97420977277155
+    x -72.8023574436505
+    y 67.2318709445254
+  ]
+  node
+  [
+    id 281
+    label "SHA256dynasty"
+    names "SHA256dynasty"
+    IVIcentrality 1.32785866425235
+    x -77.7674897396451
+    y 62.4696424737181
+  ]
+  node
+  [
+    id 290
+    label "Eastern_Description2"
+    names "Eastern_Description2"
+    IVIcentrality 1.3241536193126
+    x -79.8996721219126
+    y 59.7246041751708
+  ]
+  node
+  [
+    id 291
+    label "Zonderling81"
+    names "Zonderling81"
+    IVIcentrality 1.14102545639748
+    x -71.0514107149457
+    y 70.2826611078537
+  ]
+  node
+  [
+    id 300
+    label "anon43850"
+    names "anon43850"
+    IVIcentrality 1.86611723362796
+    x 65.1018607858234
+    y 74.858032231707
+  ]
+  node
+  [
+    id 310
+    label "Hassanpyoo"
+    names "Hassanpyoo"
+    IVIcentrality 4.69214267117991
+    x -41.9855587845452
+    y 54.0251612721133
+  ]
+  node
+  [
+    id 311
+    label "cookiesbox"
+    names "cookiesbox"
+    IVIcentrality 1.13467098935681
+    x -51.1567921853526
+    y 85.8616450202711
+  ]
+  node
+  [
+    id 320
+    label "whiteyfisk46"
+    names "whiteyfisk46"
+    IVIcentrality 1.47658279202225
+    x -90.4191017754338
+    y 41.7690342949885
+  ]
+  node
+  [
+    id 321
+    label "Amber_Sam"
+    names "Amber_Sam"
+    IVIcentrality 1.52545501719444
+    x -88.0604863144775
+    y 46.4303516184606
+  ]
+  node
+  [
+    id 329
+    label "Zealousideal_Line629"
+    names "Zealousideal_Line629"
+    IVIcentrality 1.24977089435008
+    x -99.5519504871545
+    y -7.44332182964689
+  ]
+  node
+  [
+    id 332
+    label "thejlb"
+    names "thejlb"
+    IVIcentrality 1.84890836859214
+    x -35.4710637565061
+    y -92.6673243669531
+  ]
+  node
+  [
+    id 338
+    label "Adamn27"
+    names "Adamn27"
+    IVIcentrality 1.30279202258725
+    x 31.7562650546924
+    y -94.5877078459005
+  ]
+  node
+  [
+    id 340
+    label "BitsyVirtualArt"
+    names "BitsyVirtualArt"
+    IVIcentrality 1.10763211131304
+    x -68.9706554300604
+    y 72.3723211102014
+  ]
+  node
+  [
+    id 360
+    label "lib3rty47"
+    names "lib3rty47"
+    IVIcentrality 1.33213460634697
+    x 20.7157880103042
+    y 97.5716785379216
+  ]
+  node
+  [
+    id 368
+    label "AdNational7013"
+    names "AdNational7013"
+    IVIcentrality 1.42399921527096
+    x -85.1269871679883
+    y 51.8097895503409
+  ]
+  node
+  [
+    id 371
+    label "Shutae"
+    names "Shutae"
+    IVIcentrality 1.37246782385362
+    x -85.62400698529
+    y 51.0859398609676
+  ]
+  node
+  [
+    id 372
+    label "Logical007"
+    names "Logical007"
+    IVIcentrality 1.20279083814292
+    x -84.5611261913329
+    y 53.1497379866823
+  ]
+  node
+  [
+    id 389
+    label "alwjmonster"
+    names "alwjmonster"
+    IVIcentrality 1.08970562098558
+    x -65.7164320798409
+    y -75.3636423654543
+  ]
+  node
+  [
+    id 399
+    label "ialfreddo"
+    names "ialfreddo"
+    IVIcentrality 2.78889184978912
+    x -95.5740029524361
+    y 22.8771694034387
+  ]
+  node
+  [
+    id 400
+    label "HarryButtcrumb"
+    names "HarryButtcrumb"
+    IVIcentrality 1.84137493815211
+    x -98.4132296226596
+    y 12.7191588938597
+  ]
+  node
+  [
+    id 428
+    label "hendrew1221"
+    names "hendrew1221"
+    IVIcentrality 1.63194114359053
+    x 75.0150149076928
+    y 65.2820994688489
+  ]
+  node
+  [
+    id 447
+    label "Hospitaliter"
+    names "Hospitaliter"
+    IVIcentrality 2.68311749016611
+    x -71.5896931859522
+    y 67.4811024121557
+  ]
+  node
+  [
+    id 449
+    label "JohnTheRapistBTC"
+    names "JohnTheRapistBTC"
+    IVIcentrality 2.08134145859948
+    x -91.1760392546266
+    y 38.5458717320365
+  ]
+  node
+  [
+    id 453
+    label "unfuckingstoppable"
+    names "unfuckingstoppable"
+    IVIcentrality 1.43027903126626
+    x -48.815784273013
+    y 86.8712391227438
+  ]
+  node
+  [
+    id 455
+    label "s3k2p7s9m8b5"
+    names "s3k2p7s9m8b5"
+    IVIcentrality 6.00517636358411
+    x -50.1157588076082
+    y -37.8506278045765
+  ]
+  node
+  [
+    id 457
+    label "SnooMachines7409"
+    names "SnooMachines7409"
+    IVIcentrality 1.53172977933662
+    x -85.0480072209307
+    y -51.7300718351949
+  ]
+  node
+  [
+    id 458
+    label "FitzwilliamTDarcy"
+    names "FitzwilliamTDarcy"
+    IVIcentrality 1.44878666967787
+    x -98.9851971200458
+    y -11.3046576454175
+  ]
+  node
+  [
+    id 464
+    label "KAX1107"
+    names "KAX1107"
+    IVIcentrality 2.18622807858536
+    x -82.5982753383628
+    y 54.3635743925111
+  ]
+  node
+  [
+    id 484
+    label "polloponzi"
+    names "polloponzi"
+    IVIcentrality 1.57190129448369
+    x -97.8260216711905
+    y -18.1975226579775
+  ]
+  node
+  [
+    id 485
+    label "TakeCareOfYourM0ther"
+    names "TakeCareOfYourM0ther"
+    IVIcentrality 1.1255586016405
+    x -98.1801142547197
+    y -18.7548962286125
+  ]
+  node
+  [
+    id 494
+    label "creditspreadit"
+    names "creditspreadit"
+    IVIcentrality 1.57336824375
+    x 1.30815140002315
+    y -99.4940900939256
+  ]
+  node
+  [
+    id 495
+    label "Tembelweed"
+    names "Tembelweed"
+    IVIcentrality 1.25202969118661
+    x -25.7241141912927
+    y -96.456248730353
+  ]
+  node
+  [
+    id 498
+    label "bzzking"
+    names "bzzking"
+    IVIcentrality 2.61756857734181
+    x 30.4141851797518
+    y -93.6312105920823
+  ]
+  node
+  [
+    id 503
+    label "Fritz1818"
+    names "Fritz1818"
+    IVIcentrality 4.31509379117042
+    x 87.2892577162948
+    y -41.6829686910039
+  ]
+  node
+  [
+    id 506
+    label "ethereumgasbot"
+    names "ethereumgasbot"
+    IVIcentrality 8.4933910825667
+    x 32.9929525392578
+    y -33.7213788573096
+  ]
+  node
+  [
+    id 549
+    label "The_real_flamingo"
+    names "The_real_flamingo"
+    IVIcentrality 1.38844143612417
+    x -90.8230952468951
+    y -41.0997482511415
+  ]
+  node
+  [
+    id 550
+    label "UIIOIIU"
+    names "UIIOIIU"
+    IVIcentrality 1.34947587305235
+    x -92.9622809441155
+    y -36.1094678805184
+  ]
+  node
+  [
+    id 590
+    label "adamix244"
+    names "adamix244"
+    IVIcentrality 20.9087724876364
+    x 6.19340431508724
+    y -50.2383746463774
+  ]
+  node
+  [
+    id 592
+    label "naji102"
+    names "naji102"
+    IVIcentrality 100
+    x -6.75469201793899
+    y -1.71969951599064
+  ]
+  node
+  [
+    id 593
+    label "roymustang261"
+    names "roymustang261"
+    IVIcentrality 14.2858163220913
+    x 15.8291969350137
+    y 70.5421570611811
+  ]
+  node
+  [
+    id 597
+    label "Crypto8D"
+    names "Crypto8D"
+    IVIcentrality 1.34629064432887
+    x 82.5337144857708
+    y -55.9884595021195
+  ]
+  node
+  [
+    id 599
+    label "ThrowAwaydntopnddins"
+    names "ThrowAwaydntopnddins"
+    IVIcentrality 5.42219097752256
+    x 3.78445616010561
+    y 56.0897857457468
+  ]
+  node
+  [
+    id 604
+    label "samdane7777"
+    names "samdane7777"
+    IVIcentrality 1.57992520900902
+    x -3.63840034511908
+    y 99.4295135941301
+  ]
+  node
+  [
+    id 605
+    label "K1St3"
+    names "K1St3"
+    IVIcentrality 1.1652630004799
+    x 0.00913540578692985
+    y 99.9152560023679
+  ]
+  node
+  [
+    id 621
+    label "Jethroe1"
+    names "Jethroe1"
+    IVIcentrality 1.67403867658577
+    x 54.4553867912647
+    y 83.1574016432536
+  ]
+  node
+  [
+    id 625
+    label "ethereum88"
+    names "ethereum88"
+    IVIcentrality 6.09789323726763
+    x 57.3835526084467
+    y -65.7230581986285
+  ]
+  node
+  [
+    id 627
+    label "ALiteralHamSandwich"
+    names "ALiteralHamSandwich"
+    IVIcentrality 1.35251554189595
+    x 84.113237301772
+    y -53.5745252366748
+  ]
+  node
+  [
+    id 632
+    label "raymv1987"
+    names "raymv1987"
+    IVIcentrality 3.05440135850661
+    x 87.4177004662281
+    y -44.3082023275808
+  ]
+  node
+  [
+    id 645
+    label "elitesubmissive"
+    names "elitesubmissive"
+    IVIcentrality 2.11080050920024
+    x -29.0353312564931
+    y -94.6039574817543
+  ]
+  node
+  [
+    id 683
+    label "brunoman1995"
+    names "brunoman1995"
+    IVIcentrality 1.3253469992731
+    x -79.0781931141733
+    y -60.8061232966674
+  ]
+  node
+  [
+    id 684
+    label "Seebeedeee"
+    names "Seebeedeee"
+    IVIcentrality 1.38921021274241
+    x -74.7476473452793
+    y -65.9595194031745
+  ]
+  node
+  [
+    id 693
+    label "IridiumHorseshoe"
+    names "IridiumHorseshoe"
+    IVIcentrality 2.72660362755983
+    x 94.1431766801927
+    y -28.4112235708328
+  ]
+  node
+  [
+    id 717
+    label "forexross"
+    names "forexross"
+    IVIcentrality 1.639518112725
+    x 77.2813081241348
+    y 62.5706082092707
+  ]
+  node
+  [
+    id 722
+    label "mattsparkes"
+    names "mattsparkes"
+    IVIcentrality 1.64755457565101
+    x 69.6600638118854
+    y 70.9460462323252
+  ]
+  node
+  [
+    id 723
+    label "aPurpleWallet"
+    names "aPurpleWallet"
+    IVIcentrality 1.08455449886699
+    x 70.993908692153
+    y 70.4218317892254
+  ]
+  node
+  [
+    id 740
+    label "Crypto_Gaming_"
+    names "Crypto_Gaming_"
+    IVIcentrality 22.6736108665674
+    x 61.9003303990373
+    y 59.186722456197
+  ]
+  node
+  [
+    id 743
+    label "LivingFondant1419"
+    names "LivingFondant1419"
+    IVIcentrality 6.91854365513696
+    x 65.5137526315097
+    y -23.3982564891422
+  ]
+  node
+  [
+    id 775
+    label "xcryptogurux"
+    names "xcryptogurux"
+    IVIcentrality 3.90784779106371
+    x -92.0645285302433
+    y -30.9971681595626
+  ]
+  node
+  [
+    id 776
+    label "RedPlumpTomato"
+    names "RedPlumpTomato"
+    IVIcentrality 1.35003741366576
+    x -90.7284020836389
+    y -41.4019706809662
+  ]
+  node
+  [
+    id 784
+    label "Character_Roll_644"
+    names "Character_Roll_644"
+    IVIcentrality 3.56100805691012
+    x 88.825126824352
+    y 40.1876128292611
+  ]
+  node
+  [
+    id 792
+    label "CowboyTrout"
+    names "CowboyTrout"
+    IVIcentrality 3.5348619962173
+    x -34.9326158207819
+    y -91.0484173294197
+  ]
+  node
+  [
+    id 800
+    label "Time-Obligation-1790"
+    names "Time-Obligation-1790"
+    IVIcentrality 1.46305041504449
+    x -12.7505629944339
+    y 98.7948108790032
+  ]
+  node
+  [
+    id 806
+    label "Xconcerned"
+    names "Xconcerned"
+    IVIcentrality 1.54511314796452
+    x -16.9148596400587
+    y 98.0834234242445
+  ]
+  node
+  [
+    id 810
+    label "venomenon297"
+    names "venomenon297"
+    IVIcentrality 1.33913515108046
+    x 4.92797287228218
+    y 99.6176672597493
+  ]
+  node
+  [
+    id 814
+    label "Perleflamme"
+    names "Perleflamme"
+    IVIcentrality 1.38353326355607
+    x -0.927015886698609
+    y 99.690289841955
+  ]
+  node
+  [
+    id 819
+    label "Level_Land9043"
+    names "Level_Land9043"
+    IVIcentrality 1.55893859649883
+    x 46.6754409297221
+    y -87.8925003716377
+  ]
+  node
+  [
+    id 824
+    label "KitsuneMori"
+    names "KitsuneMori"
+    IVIcentrality 1.17674622199886
+    x 56.1346237492601
+    y 82.6416531193825
+  ]
+  node
+  [
+    id 828
+    label "Innit4theTech"
+    names "Innit4theTech"
+    IVIcentrality 7.52116467455483
+    x 79.0640860032813
+    y 31.314292062145
+  ]
+  node
+  [
+    id 829
+    label "DBSOLOMAN5000"
+    names "DBSOLOMAN5000"
+    IVIcentrality 1.11903189577434
+    x 92.4925478880619
+    y 37.9147546439435
+  ]
+  node
+  [
+    id 834
+    label "Basoosh"
+    names "Basoosh"
+    IVIcentrality 4.43950334800106
+    x 96.5172849108081
+    y -4.12095543240494
+  ]
+  node
+  [
+    id 835
+    label "InevitableComplex895"
+    names "InevitableComplex895"
+    IVIcentrality 15.7746062385404
+    x 25.7661080743129
+    y -70.8846193827122
+  ]
+  node
+  [
+    id 837
+    label "Lastnamemike"
+    names "Lastnamemike"
+    IVIcentrality 2.13751402334075
+    x -98.9285880400199
+    y 0.865749993021427
+  ]
+  node
+  [
+    id 860
+    label "yummynothing"
+    names "yummynothing"
+    IVIcentrality 1.54833416710271
+    x 68.2482011878363
+    y 72.4431175418539
+  ]
+  node
+  [
+    id 861
+    label "EmptyPercentage7269"
+    names "EmptyPercentage7269"
+    IVIcentrality 1.34438541460329
+    x 62.7741089507407
+    y 77.5004326051349
+  ]
+  node
+  [
+    id 865
+    label "SEAR_ME"
+    names "SEAR_ME"
+    IVIcentrality 2.04285718075527
+    x 65.1972647224234
+    y 74.5377414253947
+  ]
+  node
+  [
+    id 878
+    label "SxQuadro"
+    names "SxQuadro"
+    IVIcentrality 3.03366929482349
+    x 71.779132696786
+    y -66.7602863614615
+  ]
+  node
+  [
+    id 879
+    label "DegreeBroad2250"
+    names "DegreeBroad2250"
+    IVIcentrality 1.60057974204545
+    x 55.4201313368392
+    y -82.6070250406894
+  ]
+  node
+  [
+    id 889
+    label "atmrank"
+    names "atmrank"
+    IVIcentrality 1.1255586016405
+    x -42.6790428582569
+    y -90.3857304463426
+  ]
+  node
+  [
+    id 890
+    label "Enkaybee"
+    names "Enkaybee"
+    IVIcentrality 1.08143586330756
+    x -24.3482385552089
+    y -96.9905319052259
+  ]
+  node
+  [
+    id 894
+    label "therdai"
+    names "therdai"
+    IVIcentrality 1.3125450416032
+    x 97.6979557847047
+    y -20.2098209090759
+  ]
+  node
+  [
+    id 896
+    label "jrshockley1s"
+    names "jrshockley1s"
+    IVIcentrality 1.27356879126453
+    x 97.0614698433442
+    y -23.2435391125962
+  ]
+  node
+  [
+    id 929
+    label "SuccessfulTrade9707"
+    names "SuccessfulTrade9707"
+    IVIcentrality 1.67049585957491
+    x 90.8216003523663
+    y -40.4065779252031
+  ]
+  node
+  [
+    id 930
+    label "OwenMichael312"
+    names "OwenMichael312"
+    IVIcentrality 1.25109202066618
+    x 91.0416186694358
+    y -40.9530328309342
+  ]
+  node
+  [
+    id 937
+    label "AbsolutBadLad"
+    names "AbsolutBadLad"
+    IVIcentrality 11.648005076268
+    x 18.539263609368
+    y 28.2173553516948
+  ]
+  node
+  [
+    id 945
+    label "bigmammoth2310"
+    names "bigmammoth2310"
+    IVIcentrality 6.43968588545859
+    x 47.7477599885202
+    y -8.94588517370782
+  ]
+  node
+  [
+    id 969
+    label "sylsau"
+    names "sylsau"
+    IVIcentrality 2.03985143374568
+    x -83.7559433673566
+    y 52.8403444284444
+  ]
+  node
+  [
+    id 983
+    label "Gh0sta"
+    names "Gh0sta"
+    IVIcentrality 1.68390063457572
+    x 99.1898103661352
+    y 6.3199848876111
+  ]
+  node
+  [
+    id 984
+    label "CastorTroyFaceGone"
+    names "CastorTroyFaceGone"
+    IVIcentrality 1.2157936831595
+    x 99.8273209582558
+    y 2.71276596665081
+  ]
+  node
+  [
+    id 992
+    label "thefoodboylover"
+    names "thefoodboylover"
+    IVIcentrality 1.17325161831919
+    x 99.6476869799372
+    y 7.19605357230376
+  ]
+  node
+  [
+    id 995
+    label "fanzakh"
+    names "fanzakh"
+    IVIcentrality 1.44022857396452
+    x -13.7166485782622
+    y -98.6886116333885
+  ]
+  node
+  [
+    id 1004
+    label "ThatNaimish1"
+    names "ThatNaimish1"
+    IVIcentrality 1.58670875754469
+    x -6.8039460088211
+    y 99.2562736864053
+  ]
+  node
+  [
+    id 1006
+    label "frank__costello"
+    names "frank__costello"
+    IVIcentrality 3.72165982976732
+    x -11.91523032727
+    y 96.5988283024283
+  ]
+  node
+  [
+    id 1044
+    label "fishing_pole"
+    names "fishing_pole"
+    IVIcentrality 1.78687637042151
+    x 88.6368092391203
+    y -44.736943065256
+  ]
+  node
+  [
+    id 1045
+    label "AWholeCoin"
+    names "AWholeCoin"
+    IVIcentrality 3.6602267960341
+    x 86.9267348318759
+    y -43.9220033462734
+  ]
+  node
+  [
+    id 1051
+    label "irresponsible_owl"
+    names "irresponsible_owl"
+    IVIcentrality 1.21434355037638
+    x 97.3116584684384
+    y 22.4407450170976
+  ]
+  node
+  [
+    id 1054
+    label "devboricha"
+    names "devboricha"
+    IVIcentrality 2.18035968707087
+    x 98.849166189631
+    y 2.8087268703745
+  ]
+  node
+  [
+    id 1060
+    label "MoldyCheesey"
+    names "MoldyCheesey"
+    IVIcentrality 2.82992358328927
+    x 98.1040201546342
+    y 5.02045880796564
+  ]
+  node
+  [
+    id 1063
+    label "HabileJ_6"
+    names "HabileJ_6"
+    IVIcentrality 2.14956319247606
+    x 56.7878283853865
+    y 80.995972625219
+  ]
+  node
+  [
+    id 1081
+    label "Dangerous_Ad_4929"
+    names "Dangerous_Ad_4929"
+    IVIcentrality 2.34941587201359
+    x -24.261947279701
+    y -95.6902950769027
+  ]
+  node
+  [
+    id 1098
+    label "ComprehensiveLab7591"
+    names "ComprehensiveLab7591"
+    IVIcentrality 5.0436531280011
+    x 90.5971290770975
+    y -31.7348010868035
+  ]
+  node
+  [
+    id 1105
+    label "rayQuGR"
+    names "rayQuGR"
+    IVIcentrality 1.61207862291557
+    x 98.1763692722771
+    y -15.9499052267717
+  ]
+  node
+  [
+    id 1146
+    label "jakkkmotivator"
+    names "jakkkmotivator"
+    IVIcentrality 1.34085209200588
+    x 7.07761483931808
+    y 99.4863090101629
+  ]
+  node
+  [
+    id 1217
+    label "Special_Yam_1174"
+    names "Special_Yam_1174"
+    IVIcentrality 3.55253606413818
+    x -68.1414561548006
+    y -69.7377902664968
+  ]
+  node
+  [
+    id 1228
+    label "diarpiiiii"
+    names "diarpiiiii"
+    IVIcentrality 2.43753482293893
+    x 90.658407625501
+    y -38.8426007773634
+  ]
+  node
+  [
+    id 1231
+    label "Grouchy-Jellyfish267"
+    names "Grouchy-Jellyfish267"
+    IVIcentrality 9.21895273808186
+    x 44.7365747947932
+    y 22.0234819307944
+  ]
+  node
+  [
+    id 1243
+    label "Viyoda"
+    names "Viyoda"
+    IVIcentrality 2.01793162192798
+    x -98.4349465606355
+    y -11.0503748815622
+  ]
+  node
+  [
+    id 1247
+    label "alexo12"
+    names "alexo12"
+    IVIcentrality 3.31124841431927
+    x 97.0891960844147
+    y -11.3106738528082
+  ]
+  node
+  [
+    id 1249
+    label "furysammy"
+    names "furysammy"
+    IVIcentrality 3.23248279086517
+    x 97.7139126243861
+    y -4.66983059525973
+  ]
+  node
+  [
+    id 1250
+    label "Imaginary-Adagio2231"
+    names "Imaginary-Adagio2231"
+    IVIcentrality 10.9167479856484
+    x 30.2828858649035
+    y 73.6390937716314
+  ]
+  node
+  [
+    id 1251
+    label "JollyJury"
+    names "JollyJury"
+    IVIcentrality 1.81645203092328
+    x -21.3622653674808
+    y 96.9308794159365
+  ]
+  node
+  [
+    id 1252
+    label "TajPereira"
+    names "TajPereira"
+    IVIcentrality 1.21002516215067
+    x 14.5630778351226
+    y 98.8025032106818
+  ]
+  node
+  [
+    id 1297
+    label "Mason_investigations"
+    names "Mason_investigations"
+    IVIcentrality 1.51674747500615
+    x -88.1691798345824
+    y 46.2425696897271
+  ]
+  node
+  [
+    id 1315
+    label "tavycrypto88"
+    names "tavycrypto88"
+    IVIcentrality 1.13627059422801
+    x 87.7820055430783
+    y -47.7832160050756
+  ]
+  node
+  [
+    id 1316
+    label "throwaway92715"
+    names "throwaway92715"
+    IVIcentrality 1.11569903196039
+    x 97.6011347891366
+    y -21.6123144907367
+  ]
+  node
+  [
+    id 1324
+    label "Deathstaroperatorguy"
+    names "Deathstaroperatorguy"
+    IVIcentrality 2.76352854223162
+    x -73.4330683870584
+    y -65.3481418811141
+  ]
+  node
+  [
+    id 1340
+    label "stauffed5188"
+    names "stauffed5188"
+    IVIcentrality 1.46182248356043
+    x 82.1177600762683
+    y -56.3907111951105
+  ]
+  node
+  [
+    id 1346
+    label "slortsfordon"
+    names "slortsfordon"
+    IVIcentrality 1.29840660270573
+    x -55.5975278376876
+    y -82.8558655231908
+  ]
+  node
+  [
+    id 1351
+    label "witnessgreatness101"
+    names "witnessgreatness101"
+    IVIcentrality 1.28322320404788
+    x -54.8686520887414
+    y -83.358706511509
+  ]
+  node
+  [
+    id 1361
+    label "bdinu89"
+    names "bdinu89"
+    IVIcentrality 2.04622265974971
+    x 47.113007364239
+    y 87.0990753814786
+  ]
+  node
+  [
+    id 1385
+    label "Cryptorealmoneyman"
+    names "Cryptorealmoneyman"
+    IVIcentrality 1.50490035452982
+    x 15.1635955709816
+    y 98.4105168357293
+  ]
+  node
+  [
+    id 1386
+    label "Elum224"
+    names "Elum224"
+    IVIcentrality 1.31815436869451
+    x 9.80310788051936
+    y 99.2778678934027
+  ]
+  node
+  [
+    id 1414
+    label "anon517"
+    names "anon517"
+    IVIcentrality 1.31600283870008
+    x -99.4943807201911
+    y 7.31424339262255
+  ]
+  node
+  [
+    id 1424
+    label "Telugucryptodaily"
+    names "Telugucryptodaily"
+    IVIcentrality 1.28844563826002
+    x -32.6649602986409
+    y 94.293104614534
+  ]
+  node
+  [
+    id 1433
+    label "PlaneJaner"
+    names "PlaneJaner"
+    IVIcentrality 2.09538046681561
+    x 98.2111854094784
+    y -12.2722377025516
+  ]
+  node
+  [
+    id 1437
+    label "Suthekingg"
+    names "Suthekingg"
+    IVIcentrality 16.1162645033145
+    x 49.8555896241291
+    y 68.4775325875476
+  ]
+  node
+  [
+    id 1438
+    label "Solodeji"
+    names "Solodeji"
+    IVIcentrality 1.93978057868124
+    x 39.5279147159126
+    y 90.9106769483333
+  ]
+  node
+  [
+    id 1447
+    label "Scary-Sand4273"
+    names "Scary-Sand4273"
+    IVIcentrality 1.22981028906321
+    x 49.3272046886747
+    y 86.8150336552581
+  ]
+  node
+  [
+    id 1457
+    label "Gunnar_S_Thompson"
+    names "Gunnar_S_Thompson"
+    IVIcentrality 2.56625808713123
+    x -1.03194461429171
+    y -98.4935389908212
+  ]
+  node
+  [
+    id 1461
+    label "UranusisGolden"
+    names "UranusisGolden"
+    IVIcentrality 1.16908230194796
+    x 51.3025826151179
+    y -85.7340768877885
+  ]
+  node
+  [
+    id 1500
+    label "vret1414"
+    names "vret1414"
+    IVIcentrality 1.33035821034732
+    x -89.8498978473148
+    y -43.3212469740181
+  ]
+  node
+  [
+    id 1501
+    label "sgtslaughterTV"
+    names "sgtslaughterTV"
+    IVIcentrality 1.2175270850243
+    x -94.8752780220286
+    y -31.1638370268773
+  ]
+  node
+  [
+    id 1523
+    label "mindfulnaser"
+    names "mindfulnaser"
+    IVIcentrality 5.81453555922777
+    x -32.048647645246
+    y -71.9169316195289
+  ]
+  node
+  [
+    id 1543
+    label "StopYTCensorship"
+    names "StopYTCensorship"
+    IVIcentrality 1.17933807262288
+    x -11.3943098397293
+    y 99.2491057533414
+  ]
+  node
+  [
+    id 1582
+    label "DreamXCVIII"
+    names "DreamXCVIII"
+    IVIcentrality 1.13627059422801
+    x -72.5864156831582
+    y -68.703191244836
+  ]
+  node
+  [
+    id 1588
+    label "h0rologist"
+    names "h0rologist"
+    IVIcentrality 1.42132135983538
+    x -89.1283255877015
+    y -44.5818278651714
+  ]
+  node
+  [
+    id 1605
+    label "comfyggs"
+    names "comfyggs"
+    IVIcentrality 7.91644878082619
+    x 71.8372415383365
+    y 9.6357350889935
+  ]
+  node
+  [
+    id 1609
+    label "TogetherWeHappy"
+    names "TogetherWeHappy"
+    IVIcentrality 1.80840932741789
+    x 96.8387835984595
+    y 21.8129747237016
+  ]
+  node
+  [
+    id 1618
+    label "CarelessLawfulness20"
+    names "CarelessLawfulness20"
+    IVIcentrality 1.73517760251441
+    x 34.9265185811506
+    y 92.9967596631526
+  ]
+  node
+  [
+    id 1621
+    label "o0joshua0o"
+    names "o0joshua0o"
+    IVIcentrality 1.19726456295034
+    x 22.6279494748531
+    y 97.2860247507568
+  ]
+  node
+  [
+    id 1671
+    label "samcornwell"
+    names "samcornwell"
+    IVIcentrality 1.32064553688702
+    x -74.9273860585138
+    y 65.8603091983063
+  ]
+  node
+  [
+    id 1702
+    label "LimitedFreepeech"
+    names "LimitedFreepeech"
+    IVIcentrality 1.084653713225
+    x -93.3778003816102
+    y -35.7761904130996
+  ]
+  node
+  [
+    id 1726
+    label "HannesVM"
+    names "HannesVM"
+    IVIcentrality 1.23262014541381
+    x -27.5763829703474
+    y -95.9635297259224
+  ]
+  node
+  [
+    id 1727
+    label "sadrifas"
+    names "sadrifas"
+    IVIcentrality 1.17074799113535
+    x -25.29609159017
+    y -96.6543232053393
+  ]
+  node
+  [
+    id 1744
+    label "WillianBo"
+    names "WillianBo"
+    IVIcentrality 2.19734727409452
+    x 32.27448702627
+    y 93.4559140990727
+  ]
+  node
+  [
+    id 1759
+    label "evil_betty_"
+    names "evil_betty_"
+    IVIcentrality 5.56500741645631
+    x 94.7214786111291
+    y 11.9108409043031
+  ]
+  node
+  [
+    id 1764
+    label "asiby20"
+    names "asiby20"
+    IVIcentrality 1.27698451190954
+    x -89.5329874581573
+    y 44.0947381982219
+  ]
+  node
+  [
+    id 1766
+    label "RemarkableBridge1019"
+    names "RemarkableBridge1019"
+    IVIcentrality 1.30846485862594
+    x -87.8371538602639
+    y 47.3157994229415
+  ]
+  node
+  [
+    id 1772
+    label "Tux_fan"
+    names "Tux_fan"
+    IVIcentrality 2.38730441182012
+    x -84.0989696248384
+    y -51.6243845197824
+  ]
+  node
+  [
+    id 1781
+    label "g2g079"
+    names "g2g079"
+    IVIcentrality 1.21211531926077
+    x 66.0869477883149
+    y 74.8739685109579
+  ]
+  node
+  [
+    id 1825
+    label "dunkin1980"
+    names "dunkin1980"
+    IVIcentrality 1.46018022023578
+    x -42.645393892997
+    y 90.0274401426699
+  ]
+  node
+  [
+    id 1826
+    label "JanPB"
+    names "JanPB"
+    IVIcentrality 1.6114926939
+    x -78.8184284048396
+    y 60.669367368195
+  ]
+  node
+  [
+    id 1863
+    label "SID1318"
+    names "SID1318"
+    IVIcentrality 1.4463041446238
+    x 72.549585454511
+    y 68.2855933418031
+  ]
+  node
+  [
+    id 1871
+    label "illusionst"
+    names "illusionst"
+    IVIcentrality 1.53601536900916
+    x 45.0159478881562
+    y -88.7798725682505
+  ]
+  node
+  [
+    id 1872
+    label "anotherone1886"
+    names "anotherone1886"
+    IVIcentrality 1.20856060287934
+    x 40.7192679376119
+    y -91.1935021073978
+  ]
+  node
+  [
+    id 1878
+    label "Emulion"
+    names "Emulion"
+    IVIcentrality 2.3687846842431
+    x 31.3641356155318
+    y 93.5825845153738
+  ]
+  node
+  [
+    id 1886
+    label "Diligent_Buyer9440"
+    names "Diligent_Buyer9440"
+    IVIcentrality 1.7891171558612
+    x -82.2250462867558
+    y -55.6459339949475
+  ]
+  node
+  [
+    id 1891
+    label "Aussiehash"
+    names "Aussiehash"
+    IVIcentrality 1.23187152525111
+    x -86.0824906099765
+    y -50.5906303262176
+  ]
+  node
+  [
+    id 1902
+    label "gifeur"
+    names "gifeur"
+    IVIcentrality 2.26068772232819
+    x 76.8496683707254
+    y -62.1057231898657
+  ]
+  node
+  [
+    id 1924
+    label "o0BetaRay0o"
+    names "o0BetaRay0o"
+    IVIcentrality 1.53575055408199
+    x -98.0573740021556
+    y -17.1203398717776
+  ]
+  node
+  [
+    id 1925
+    label "reddit4485"
+    names "reddit4485"
+    IVIcentrality 1.44433610353168
+    x -97.7354743042364
+    y -19.3529873254902
+  ]
+  node
+  [
+    id 1926
+    label "GibTreaty"
+    names "GibTreaty"
+    IVIcentrality 1.37922391829799
+    x -99.3760913927651
+    y -8.01712896091875
+  ]
+  node
+  [
+    id 1980
+    label "busterrulezzz"
+    names "busterrulezzz"
+    IVIcentrality 4.029130212795
+    x 96.2870199077276
+    y -11.904018908084
+  ]
+  node
+  [
+    id 1985
+    label "throwaway11121121112"
+    names "throwaway11121121112"
+    IVIcentrality 1.41005820435967
+    x 38.6111698025858
+    y -91.8849548473636
+  ]
+  node
+  [
+    id 1986
+    label "Manticlops"
+    names "Manticlops"
+    IVIcentrality 1.30149078897025
+    x 45.1261277126063
+    y -88.9898305787161
+  ]
+  node
+  [
+    id 1997
+    label "AdvocatusDiabo"
+    names "AdvocatusDiabo"
+    IVIcentrality 1.20636759435981
+    x 62.5320243993824
+    y 77.8749148544556
+  ]
+  node
+  [
+    id 2003
+    label "Rannasha"
+    names "Rannasha"
+    IVIcentrality 1.32979164022068
+    x -93.7876507550207
+    y -33.9665337129976
+  ]
+  node
+  [
+    id 2049
+    label "olsonolsen"
+    names "olsonolsen"
+    IVIcentrality 1.39149301046054
+    x -29.0008012726027
+    y -95.3748520338947
+  ]
+  node
+  [
+    id 2062
+    label "i_heart_dial-up"
+    names "i_heart_dial-up"
+    IVIcentrality 1.69323121758032
+    x 89.362885149185
+    y -43.4851757280416
+  ]
+  node
+  [
+    id 2118
+    label "ProductDude"
+    names "ProductDude"
+    IVIcentrality 3.3635390505237
+    x 14.4564785060036
+    y 96.6174012502455
+  ]
+  node
+  [
+    id 2124
+    label "sundayzee"
+    names "sundayzee"
+    IVIcentrality 1.33110269927447
+    x 78.9645424099686
+    y -60.9441176644368
+  ]
+  node
+  [
+    id 2142
+    label "annoyedpencil"
+    names "annoyedpencil"
+    IVIcentrality 1.4162513533616
+    x 55.3828219564832
+    y -82.8562756830441
+  ]
+  node
+  [
+    id 2149
+    label "a_hopeless_rmntic"
+    names "a_hopeless_rmntic"
+    IVIcentrality 1.97395870072786
+    x 99.0864807285997
+    y -1.49243518356998
+  ]
+  node
+  [
+    id 2152
+    label "21MillionCo"
+    names "21MillionCo"
+    IVIcentrality 1.2281744919091
+    x -77.2922811135614
+    y 63.2159530013296
+  ]
+  node
+  [
+    id 2159
+    label "Soft-Spring9843"
+    names "Soft-Spring9843"
+    IVIcentrality 1.30903955254335
+    x -54.5428373739323
+    y 83.5410883070399
+  ]
+  node
+  [
+    id 2173
+    label "pcvcolin"
+    names "pcvcolin"
+    IVIcentrality 2.17757170430852
+    x -62.9631045598293
+    y -76.2577963547421
+  ]
+  node
+  [
+    id 2181
+    label "Godfreee"
+    names "Godfreee"
+    IVIcentrality 2.15562345082623
+    x -98.7009278946934
+    y 6.4899793054021
+  ]
+  node
+  [
+    id 2192
+    label "Djglamrock"
+    names "Djglamrock"
+    IVIcentrality 6.6783470554815
+    x 79.9674415613994
+    y -9.97819741052456
+  ]
+  node
+  [
+    id 2197
+    label "TobiHovey"
+    names "TobiHovey"
+    IVIcentrality 1.69854856226408
+    x 34.7389522289727
+    y 93.1065117513768
+  ]
+  node
+  [
+    id 2203
+    label "TonyStark028"
+    names "TonyStark028"
+    IVIcentrality 1.6049617537644
+    x -97.0030067265567
+    y 22.019239653399
+  ]
+  node
+  [
+    id 2205
+    label "zomgitsduke"
+    names "zomgitsduke"
+    IVIcentrality 1.19941760743041
+    x -99.8548980294912
+    y -2.2713976384794
+  ]
+  node
+  [
+    id 2244
+    label "throwymcthrowface2"
+    names "throwymcthrowface2"
+    IVIcentrality 4.81451107802151
+    x -21.8106179865741
+    y 62.2836591666472
+  ]
+  node
+  [
+    id 2282
+    label "Zeeblackbaron"
+    names "Zeeblackbaron"
+    IVIcentrality 1.32937588622527
+    x -22.0808284191828
+    y -97.274712603384
+  ]
+  node
+  [
+    id 2289
+    label "cazardie000"
+    names "cazardie000"
+    IVIcentrality 1.28637431401443
+    x 29.2868932542662
+    y 95.3985587660248
+  ]
+  node
+  [
+    id 2304
+    label "Icy_Potential_9593"
+    names "Icy_Potential_9593"
+    IVIcentrality 2.00174223458417
+    x -39.5454041927883
+    y -90.8347568460785
+  ]
+  node
+  [
+    id 2322
+    label "Exitmorelikeentrance"
+    names "Exitmorelikeentrance"
+    IVIcentrality 1.26531205684641
+    x -99.4501089058731
+    y 8.51663691715021
+  ]
+  node
+  [
+    id 2331
+    label "Fiach_Dubh"
+    names "Fiach_Dubh"
+    IVIcentrality 2.78314786087637
+    x -43.808515539601
+    y -87.9756229403058
+  ]
+  node
+  [
+    id 2333
+    label "Lbaseball06"
+    names "Lbaseball06"
+    IVIcentrality 1.31826710594996
+    x -40.8260877080324
+    y -91.0241934904867
+  ]
+  node
+  [
+    id 2348
+    label "KarmaKaroo"
+    names "KarmaKaroo"
+    IVIcentrality 1.31967250238098
+    x 64.6103970733916
+    y -75.0138683299792
+  ]
+  node
+  [
+    id 2374
+    label "donttrythis3000"
+    names "donttrythis3000"
+    IVIcentrality 1.41768971994686
+    x -92.2838272972369
+    y 37.6274471066674
+  ]
+  node
+  [
+    id 2397
+    label "dikgumdur"
+    names "dikgumdur"
+    IVIcentrality 2.15732407762854
+    x -39.5616996296769
+    y 90.6560798509089
+  ]
+  node
+  [
+    id 2413
+    label "gharvhel"
+    names "gharvhel"
+    IVIcentrality 1.65109835329393
+    x -3.32112771802118
+    y 99.3686252516878
+  ]
+  node
+  [
+    id 2414
+    label "Conan4President"
+    names "Conan4President"
+    IVIcentrality 1.49714554663671
+    x -13.1732214861991
+    y 98.7045690710166
+  ]
+  node
+  [
+    id 2420
+    label "Elsa897"
+    names "Elsa897"
+    IVIcentrality 1.38192866747369
+    x -62.0037690612281
+    y 78.0696439677866
+  ]
+  node
+  [
+    id 2421
+    label "Bitcoiner2017"
+    names "Bitcoiner2017"
+    IVIcentrality 1.44587688343743
+    x -75.7935570728927
+    y 64.666740937207
+  ]
+  node
+  [
+    id 2426
+    label "Major_Bandicoot_3239"
+    names "Major_Bandicoot_3239"
+    IVIcentrality 1.43003714888168
+    x 95.8742678256613
+    y 27.1618571418274
+  ]
+  node
+  [
+    id 2434
+    label "KeyMillion"
+    names "KeyMillion"
+    IVIcentrality 1.08970562098558
+    x -73.7744124628841
+    y -67.4956598726814
+  ]
+  node
+  [
+    id 2451
+    label "slvbtc"
+    names "slvbtc"
+    IVIcentrality 1.42110250426339
+    x 26.7578189910434
+    y 95.9971927543816
+  ]
+  node
+  [
+    id 2471
+    label "dragonbenj"
+    names "dragonbenj"
+    IVIcentrality 2.02475101186889
+    x 98.8466218580862
+    y -6.28722113855161
+  ]
+  node
+  [
+    id 2478
+    label "fecktk"
+    names "fecktk"
+    IVIcentrality 1.76769508321833
+    x 3.11173621123602
+    y 99.2574734778228
+  ]
+  node
+  [
+    id 2483
+    label "C4-PO"
+    names "C4-PO"
+    IVIcentrality 2.62209380499717
+    x -22.0297728382487
+    y 95.9458944148053
+  ]
+  node
+  [
+    id 2492
+    label "Lobsterino12"
+    names "Lobsterino12"
+    IVIcentrality 1.36868287982803
+    x -40.4945311933926
+    y 91.1164079310198
+  ]
+  node
+  [
+    id 2501
+    label "ProudHODLER69420"
+    names "ProudHODLER69420"
+    IVIcentrality 1.5112251522743
+    x -94.6446282621256
+    y 30.9141637594519
+  ]
+  node
+  [
+    id 2502
+    label "Substantial_Hair2459"
+    names "Substantial_Hair2459"
+    IVIcentrality 1.6506625166195
+    x -95.3115676366855
+    y 28.3009940298094
+  ]
+  node
+  [
+    id 2523
+    label "Karmaa"
+    names "Karmaa"
+    IVIcentrality 1.28362852863245
+    x -59.8865036317165
+    y -79.8296175201669
+  ]
+  node
+  [
+    id 2624
+    label "Purple-Intern9790"
+    names "Purple-Intern9790"
+    IVIcentrality 2.52892226490201
+    x -53.1017014004101
+    y -83.0041466070336
+  ]
+  node
+  [
+    id 2625
+    label "wkw3"
+    names "wkw3"
+    IVIcentrality 1.08149342599244
+    x -49.4352492439815
+    y -86.9260863848639
+  ]
+  node
+  [
+    id 2633
+    label "ShowerWide7800"
+    names "ShowerWide7800"
+    IVIcentrality 1.44386644167577
+    x -20.1136790338435
+    y 97.5822503504917
+  ]
+  node
+  [
+    id 2639
+    label "mondayfreak"
+    names "mondayfreak"
+    IVIcentrality 3.15057993018714
+    x 49.9665083874295
+    y -84.1983995518642
+  ]
+  node
+  [
+    id 2701
+    label "CeFi_Rates"
+    names "CeFi_Rates"
+    IVIcentrality 1.31435602746217
+    x -58.9377356490469
+    y 80.494132985413
+  ]
+  node
+  [
+    id 2708
+    label "dva_silk"
+    names "dva_silk"
+    IVIcentrality 1.41083288760217
+    x -7.44324747089511
+    y 99.3886780115399
+  ]
+  node
+  [
+    id 2725
+    label "successfulpun22"
+    names "successfulpun22"
+    IVIcentrality 1.5930506933077
+    x 70.5449688572535
+    y 70.1443743513893
+  ]
+  node
+  [
+    id 2737
+    label "Amichateur"
+    names "Amichateur"
+    IVIcentrality 2.34390177205299
+    x 98.0752144390709
+    y -11.2972380057873
+  ]
+  node
+  [
+    id 2752
+    label "ribirat777"
+    names "ribirat777"
+    IVIcentrality 1.55267239643199
+    x -93.666365032849
+    y 33.6386880453467
+  ]
+  node
+  [
+    id 2755
+    label "sakuser"
+    names "sakuser"
+    IVIcentrality 1.21997541972543
+    x -94.9948787631167
+    y 30.7893129826843
+  ]
+  node
+  [
+    id 2782
+    label "SempwrFiUSMC"
+    names "SempwrFiUSMC"
+    IVIcentrality 1.29734397153584
+    x 11.2114343365574
+    y 99.1498748021026
+  ]
+  node
+  [
+    id 2790
+    label "Jacekdaf"
+    names "Jacekdaf"
+    IVIcentrality 1.3252396549802
+    x 38.9861512981321
+    y -91.8196433995782
+  ]
+  node
+  [
+    id 2845
+    label "myzalkidiz"
+    names "myzalkidiz"
+    IVIcentrality 1.62228502132697
+    x -63.1763179255444
+    y 76.8095006760161
+  ]
+  node
+  [
+    id 2852
+    label "N-ve"
+    names "N-ve"
+    IVIcentrality 1.52247253747446
+    x -48.4383499577845
+    y -86.9755906736796
+  ]
+  node
+  [
+    id 2859
+    label "Infamous_Spot_6086"
+    names "Infamous_Spot_6086"
+    IVIcentrality 1.24567340376931
+    x 43.8488552749093
+    y 89.6889003280992
+  ]
+  node
+  [
+    id 2867
+    label "dpxlumpi"
+    names "dpxlumpi"
+    IVIcentrality 2.36499597339944
+    x -19.3846263865758
+    y 96.7801707932558
+  ]
+  node
+  [
+    id 2882
+    label "lamar1441"
+    names "lamar1441"
+    IVIcentrality 1.78168767978806
+    x -94.4441740544832
+    y 30.6466579584977
+  ]
+  node
+  [
+    id 2903
+    label "austin_bee"
+    names "austin_bee"
+    IVIcentrality 2.18483688081838
+    x 98.8292817407332
+    y -3.30522626421127
+  ]
+  node
+  [
+    id 2956
+    label "SandiegoGWA"
+    names "SandiegoGWA"
+    IVIcentrality 1.3631167222636
+    x -91.6549430470686
+    y 39.2746792666884
+  ]
+  edge
+  [
+    source 0
+    target 399
+  ]
+  edge
+  [
+    source 0
+    target 400
+  ]
+  edge
+  [
+    source 1
+    target 0
+  ]
+  edge
+  [
+    source 2
+    target 0
+  ]
+  edge
+  [
+    source 2
+    target 1
+  ]
+  edge
+  [
+    source 3
+    target 0
+  ]
+  edge
+  [
+    source 3
+    target 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+  ]
+  edge
+  [
+    source 12
+    target 10
+  ]
+  edge
+  [
+    source 13
+    target 10
+  ]
+  edge
+  [
+    source 13
+    target 12
+  ]
+  edge
+  [
+    source 13
+    target 1252
+  ]
+  edge
+  [
+    source 13
+    target 1447
+  ]
+  edge
+  [
+    source 13
+    target 1744
+  ]
+  edge
+  [
+    source 13
+    target 2451
+  ]
+  edge
+  [
+    source 13
+    target 2859
+  ]
+  edge
+  [
+    source 21
+    target 21
+  ]
+  edge
+  [
+    source 21
+    target 22
+  ]
+  edge
+  [
+    source 22
+    target 21
+  ]
+  edge
+  [
+    source 22
+    target 22
+  ]
+  edge
+  [
+    source 22
+    target 155
+  ]
+  edge
+  [
+    source 22
+    target 484
+  ]
+  edge
+  [
+    source 22
+    target 1243
+  ]
+  edge
+  [
+    source 22
+    target 2181
+  ]
+  edge
+  [
+    source 22
+    target 2882
+  ]
+  edge
+  [
+    source 30
+    target 115
+  ]
+  edge
+  [
+    source 30
+    target 1886
+  ]
+  edge
+  [
+    source 52
+    target 52
+  ]
+  edge
+  [
+    source 53
+    target 52
+  ]
+  edge
+  [
+    source 53
+    target 53
+  ]
+  edge
+  [
+    source 53
+    target 73
+  ]
+  edge
+  [
+    source 53
+    target 115
+  ]
+  edge
+  [
+    source 53
+    target 1457
+  ]
+  edge
+  [
+    source 53
+    target 2331
+  ]
+  edge
+  [
+    source 53
+    target 2624
+  ]
+  edge
+  [
+    source 54
+    target 52
+  ]
+  edge
+  [
+    source 54
+    target 1217
+  ]
+  edge
+  [
+    source 54
+    target 1351
+  ]
+  edge
+  [
+    source 54
+    target 2523
+  ]
+  edge
+  [
+    source 54
+    target 2852
+  ]
+  edge
+  [
+    source 63
+    target 63
+  ]
+  edge
+  [
+    source 65
+    target 63
+  ]
+  edge
+  [
+    source 65
+    target 621
+  ]
+  edge
+  [
+    source 65
+    target 1063
+  ]
+  edge
+  [
+    source 65
+    target 2633
+  ]
+  edge
+  [
+    source 69
+    target 63
+  ]
+  edge
+  [
+    source 69
+    target 300
+  ]
+  edge
+  [
+    source 69
+    target 428
+  ]
+  edge
+  [
+    source 69
+    target 621
+  ]
+  edge
+  [
+    source 69
+    target 717
+  ]
+  edge
+  [
+    source 69
+    target 722
+  ]
+  edge
+  [
+    source 69
+    target 784
+  ]
+  edge
+  [
+    source 69
+    target 828
+  ]
+  edge
+  [
+    source 69
+    target 992
+  ]
+  edge
+  [
+    source 69
+    target 1063
+  ]
+  edge
+  [
+    source 69
+    target 1361
+  ]
+  edge
+  [
+    source 69
+    target 1438
+  ]
+  edge
+  [
+    source 69
+    target 1618
+  ]
+  edge
+  [
+    source 69
+    target 1744
+  ]
+  edge
+  [
+    source 69
+    target 1878
+  ]
+  edge
+  [
+    source 69
+    target 2118
+  ]
+  edge
+  [
+    source 69
+    target 2197
+  ]
+  edge
+  [
+    source 69
+    target 2478
+  ]
+  edge
+  [
+    source 69
+    target 2483
+  ]
+  edge
+  [
+    source 69
+    target 2725
+  ]
+  edge
+  [
+    source 73
+    target 104
+  ]
+  edge
+  [
+    source 73
+    target 2304
+  ]
+  edge
+  [
+    source 82
+    target 1863
+  ]
+  edge
+  [
+    source 85
+    target 82
+  ]
+  edge
+  [
+    source 104
+    target 53
+  ]
+  edge
+  [
+    source 104
+    target 115
+  ]
+  edge
+  [
+    source 104
+    target 155
+  ]
+  edge
+  [
+    source 104
+    target 455
+  ]
+  edge
+  [
+    source 104
+    target 775
+  ]
+  edge
+  [
+    source 104
+    target 792
+  ]
+  edge
+  [
+    source 104
+    target 837
+  ]
+  edge
+  [
+    source 104
+    target 1324
+  ]
+  edge
+  [
+    source 104
+    target 1523
+  ]
+  edge
+  [
+    source 104
+    target 1772
+  ]
+  edge
+  [
+    source 104
+    target 2173
+  ]
+  edge
+  [
+    source 104
+    target 2181
+  ]
+  edge
+  [
+    source 116
+    target 115
+  ]
+  edge
+  [
+    source 116
+    target 320
+  ]
+  edge
+  [
+    source 116
+    target 329
+  ]
+  edge
+  [
+    source 116
+    target 2483
+  ]
+  edge
+  [
+    source 122
+    target 115
+  ]
+  edge
+  [
+    source 122
+    target 122
+  ]
+  edge
+  [
+    source 122
+    target 1217
+  ]
+  edge
+  [
+    source 135
+    target 135
+  ]
+  edge
+  [
+    source 135
+    target 310
+  ]
+  edge
+  [
+    source 135
+    target 2118
+  ]
+  edge
+  [
+    source 146
+    target 146
+  ]
+  edge
+  [
+    source 147
+    target 146
+  ]
+  edge
+  [
+    source 147
+    target 549
+  ]
+  edge
+  [
+    source 155
+    target 22
+  ]
+  edge
+  [
+    source 155
+    target 104
+  ]
+  edge
+  [
+    source 155
+    target 155
+  ]
+  edge
+  [
+    source 155
+    target 784
+  ]
+  edge
+  [
+    source 155
+    target 2639
+  ]
+  edge
+  [
+    source 177
+    target 0
+  ]
+  edge
+  [
+    source 180
+    target 0
+  ]
+  edge
+  [
+    source 180
+    target 177
+  ]
+  edge
+  [
+    source 180
+    target 2322
+  ]
+  edge
+  [
+    source 203
+    target 0
+  ]
+  edge
+  [
+    source 203
+    target 2483
+  ]
+  edge
+  [
+    source 203
+    target 2845
+  ]
+  edge
+  [
+    source 214
+    target 210
+  ]
+  edge
+  [
+    source 214
+    target 1924
+  ]
+  edge
+  [
+    source 273
+    target 268
+  ]
+  edge
+  [
+    source 273
+    target 273
+  ]
+  edge
+  [
+    source 273
+    target 837
+  ]
+  edge
+  [
+    source 273
+    target 1424
+  ]
+  edge
+  [
+    source 273
+    target 2397
+  ]
+  edge
+  [
+    source 273
+    target 2478
+  ]
+  edge
+  [
+    source 277
+    target 268
+  ]
+  edge
+  [
+    source 277
+    target 464
+  ]
+  edge
+  [
+    source 281
+    target 203
+  ]
+  edge
+  [
+    source 281
+    target 279
+  ]
+  edge
+  [
+    source 281
+    target 290
+  ]
+  edge
+  [
+    source 281
+    target 291
+  ]
+  edge
+  [
+    source 281
+    target 453
+  ]
+  edge
+  [
+    source 281
+    target 2152
+  ]
+  edge
+  [
+    source 281
+    target 2159
+  ]
+  edge
+  [
+    source 281
+    target 2181
+  ]
+  edge
+  [
+    source 281
+    target 2420
+  ]
+  edge
+  [
+    source 281
+    target 2421
+  ]
+  edge
+  [
+    source 291
+    target 290
+  ]
+  edge
+  [
+    source 310
+    target 2244
+  ]
+  edge
+  [
+    source 311
+    target 203
+  ]
+  edge
+  [
+    source 311
+    target 310
+  ]
+  edge
+  [
+    source 320
+    target 464
+  ]
+  edge
+  [
+    source 321
+    target 320
+  ]
+  edge
+  [
+    source 321
+    target 321
+  ]
+  edge
+  [
+    source 321
+    target 1297
+  ]
+  edge
+  [
+    source 321
+    target 2882
+  ]
+  edge
+  [
+    source 329
+    target 115
+  ]
+  edge
+  [
+    source 329
+    target 320
+  ]
+  edge
+  [
+    source 329
+    target 329
+  ]
+  edge
+  [
+    source 332
+    target 53
+  ]
+  edge
+  [
+    source 332
+    target 155
+  ]
+  edge
+  [
+    source 338
+    target 155
+  ]
+  edge
+  [
+    source 338
+    target 2348
+  ]
+  edge
+  [
+    source 340
+    target 279
+  ]
+  edge
+  [
+    source 360
+    target 135
+  ]
+  edge
+  [
+    source 360
+    target 2289
+  ]
+  edge
+  [
+    source 371
+    target 368
+  ]
+  edge
+  [
+    source 371
+    target 371
+  ]
+  edge
+  [
+    source 372
+    target 368
+  ]
+  edge
+  [
+    source 372
+    target 464
+  ]
+  edge
+  [
+    source 389
+    target 115
+  ]
+  edge
+  [
+    source 400
+    target 399
+  ]
+  edge
+  [
+    source 447
+    target 447
+  ]
+  edge
+  [
+    source 447
+    target 449
+  ]
+  edge
+  [
+    source 449
+    target 0
+  ]
+  edge
+  [
+    source 449
+    target 447
+  ]
+  edge
+  [
+    source 449
+    target 449
+  ]
+  edge
+  [
+    source 449
+    target 2501
+  ]
+  edge
+  [
+    source 449
+    target 2502
+  ]
+  edge
+  [
+    source 449
+    target 2752
+  ]
+  edge
+  [
+    source 453
+    target 447
+  ]
+  edge
+  [
+    source 453
+    target 2420
+  ]
+  edge
+  [
+    source 453
+    target 2478
+  ]
+  edge
+  [
+    source 453
+    target 2633
+  ]
+  edge
+  [
+    source 455
+    target 53
+  ]
+  edge
+  [
+    source 455
+    target 775
+  ]
+  edge
+  [
+    source 457
+    target 455
+  ]
+  edge
+  [
+    source 457
+    target 457
+  ]
+  edge
+  [
+    source 457
+    target 458
+  ]
+  edge
+  [
+    source 458
+    target 214
+  ]
+  edge
+  [
+    source 458
+    target 455
+  ]
+  edge
+  [
+    source 458
+    target 457
+  ]
+  edge
+  [
+    source 458
+    target 969
+  ]
+  edge
+  [
+    source 458
+    target 1500
+  ]
+  edge
+  [
+    source 458
+    target 1501
+  ]
+  edge
+  [
+    source 458
+    target 1826
+  ]
+  edge
+  [
+    source 458
+    target 1924
+  ]
+  edge
+  [
+    source 458
+    target 1925
+  ]
+  edge
+  [
+    source 458
+    target 1926
+  ]
+  edge
+  [
+    source 458
+    target 2374
+  ]
+  edge
+  [
+    source 464
+    target 464
+  ]
+  edge
+  [
+    source 485
+    target 484
+  ]
+  edge
+  [
+    source 495
+    target 52
+  ]
+  edge
+  [
+    source 495
+    target 494
+  ]
+  edge
+  [
+    source 495
+    target 495
+  ]
+  edge
+  [
+    source 495
+    target 1726
+  ]
+  edge
+  [
+    source 495
+    target 2282
+  ]
+  edge
+  [
+    source 498
+    target 494
+  ]
+  edge
+  [
+    source 498
+    target 498
+  ]
+  edge
+  [
+    source 503
+    target 503
+  ]
+  edge
+  [
+    source 506
+    target 503
+  ]
+  edge
+  [
+    source 506
+    target 506
+  ]
+  edge
+  [
+    source 506
+    target 592
+  ]
+  edge
+  [
+    source 506
+    target 937
+  ]
+  edge
+  [
+    source 506
+    target 1902
+  ]
+  edge
+  [
+    source 506
+    target 2471
+  ]
+  edge
+  [
+    source 550
+    target 0
+  ]
+  edge
+  [
+    source 550
+    target 53
+  ]
+  edge
+  [
+    source 550
+    target 147
+  ]
+  edge
+  [
+    source 550
+    target 549
+  ]
+  edge
+  [
+    source 550
+    target 550
+  ]
+  edge
+  [
+    source 590
+    target 937
+  ]
+  edge
+  [
+    source 590
+    target 1231
+  ]
+  edge
+  [
+    source 592
+    target 503
+  ]
+  edge
+  [
+    source 592
+    target 506
+  ]
+  edge
+  [
+    source 592
+    target 590
+  ]
+  edge
+  [
+    source 592
+    target 592
+  ]
+  edge
+  [
+    source 592
+    target 593
+  ]
+  edge
+  [
+    source 592
+    target 740
+  ]
+  edge
+  [
+    source 592
+    target 743
+  ]
+  edge
+  [
+    source 592
+    target 835
+  ]
+  edge
+  [
+    source 592
+    target 945
+  ]
+  edge
+  [
+    source 592
+    target 1045
+  ]
+  edge
+  [
+    source 592
+    target 1250
+  ]
+  edge
+  [
+    source 592
+    target 1437
+  ]
+  edge
+  [
+    source 592
+    target 1605
+  ]
+  edge
+  [
+    source 592
+    target 1980
+  ]
+  edge
+  [
+    source 593
+    target 590
+  ]
+  edge
+  [
+    source 593
+    target 592
+  ]
+  edge
+  [
+    source 593
+    target 593
+  ]
+  edge
+  [
+    source 593
+    target 834
+  ]
+  edge
+  [
+    source 593
+    target 835
+  ]
+  edge
+  [
+    source 593
+    target 937
+  ]
+  edge
+  [
+    source 593
+    target 945
+  ]
+  edge
+  [
+    source 593
+    target 1054
+  ]
+  edge
+  [
+    source 593
+    target 1250
+  ]
+  edge
+  [
+    source 593
+    target 1340
+  ]
+  edge
+  [
+    source 593
+    target 1437
+  ]
+  edge
+  [
+    source 593
+    target 2192
+  ]
+  edge
+  [
+    source 597
+    target 590
+  ]
+  edge
+  [
+    source 597
+    target 1437
+  ]
+  edge
+  [
+    source 597
+    target 2124
+  ]
+  edge
+  [
+    source 599
+    target 599
+  ]
+  edge
+  [
+    source 599
+    target 1385
+  ]
+  edge
+  [
+    source 599
+    target 1386
+  ]
+  edge
+  [
+    source 599
+    target 2244
+  ]
+  edge
+  [
+    source 605
+    target 604
+  ]
+  edge
+  [
+    source 605
+    target 1146
+  ]
+  edge
+  [
+    source 605
+    target 2708
+  ]
+  edge
+  [
+    source 625
+    target 834
+  ]
+  edge
+  [
+    source 625
+    target 1247
+  ]
+  edge
+  [
+    source 627
+    target 592
+  ]
+  edge
+  [
+    source 627
+    target 625
+  ]
+  edge
+  [
+    source 627
+    target 632
+  ]
+  edge
+  [
+    source 627
+    target 1231
+  ]
+  edge
+  [
+    source 627
+    target 2348
+  ]
+  edge
+  [
+    source 632
+    target 503
+  ]
+  edge
+  [
+    source 632
+    target 590
+  ]
+  edge
+  [
+    source 632
+    target 625
+  ]
+  edge
+  [
+    source 632
+    target 632
+  ]
+  edge
+  [
+    source 632
+    target 835
+  ]
+  edge
+  [
+    source 632
+    target 878
+  ]
+  edge
+  [
+    source 684
+    target 683
+  ]
+  edge
+  [
+    source 684
+    target 1217
+  ]
+  edge
+  [
+    source 693
+    target 592
+  ]
+  edge
+  [
+    source 693
+    target 1605
+  ]
+  edge
+  [
+    source 717
+    target 717
+  ]
+  edge
+  [
+    source 723
+    target 722
+  ]
+  edge
+  [
+    source 740
+    target 590
+  ]
+  edge
+  [
+    source 740
+    target 592
+  ]
+  edge
+  [
+    source 740
+    target 625
+  ]
+  edge
+  [
+    source 740
+    target 740
+  ]
+  edge
+  [
+    source 740
+    target 828
+  ]
+  edge
+  [
+    source 740
+    target 835
+  ]
+  edge
+  [
+    source 740
+    target 1060
+  ]
+  edge
+  [
+    source 740
+    target 1247
+  ]
+  edge
+  [
+    source 740
+    target 1249
+  ]
+  edge
+  [
+    source 740
+    target 1250
+  ]
+  edge
+  [
+    source 740
+    target 1605
+  ]
+  edge
+  [
+    source 740
+    target 1759
+  ]
+  edge
+  [
+    source 740
+    target 2149
+  ]
+  edge
+  [
+    source 740
+    target 2192
+  ]
+  edge
+  [
+    source 743
+    target 590
+  ]
+  edge
+  [
+    source 743
+    target 592
+  ]
+  edge
+  [
+    source 743
+    target 740
+  ]
+  edge
+  [
+    source 743
+    target 1228
+  ]
+  edge
+  [
+    source 743
+    target 1980
+  ]
+  edge
+  [
+    source 776
+    target 775
+  ]
+  edge
+  [
+    source 776
+    target 776
+  ]
+  edge
+  [
+    source 792
+    target 104
+  ]
+  edge
+  [
+    source 792
+    target 792
+  ]
+  edge
+  [
+    source 800
+    target 800
+  ]
+  edge
+  [
+    source 800
+    target 806
+  ]
+  edge
+  [
+    source 806
+    target 800
+  ]
+  edge
+  [
+    source 806
+    target 1744
+  ]
+  edge
+  [
+    source 806
+    target 1825
+  ]
+  edge
+  [
+    source 810
+    target 810
+  ]
+  edge
+  [
+    source 814
+    target 604
+  ]
+  edge
+  [
+    source 814
+    target 810
+  ]
+  edge
+  [
+    source 814
+    target 814
+  ]
+  edge
+  [
+    source 814
+    target 1438
+  ]
+  edge
+  [
+    source 814
+    target 1543
+  ]
+  edge
+  [
+    source 814
+    target 1618
+  ]
+  edge
+  [
+    source 814
+    target 1621
+  ]
+  edge
+  [
+    source 814
+    target 2197
+  ]
+  edge
+  [
+    source 814
+    target 2413
+  ]
+  edge
+  [
+    source 814
+    target 2414
+  ]
+  edge
+  [
+    source 814
+    target 2483
+  ]
+  edge
+  [
+    source 814
+    target 2782
+  ]
+  edge
+  [
+    source 819
+    target 155
+  ]
+  edge
+  [
+    source 819
+    target 819
+  ]
+  edge
+  [
+    source 824
+    target 82
+  ]
+  edge
+  [
+    source 824
+    target 819
+  ]
+  edge
+  [
+    source 824
+    target 1051
+  ]
+  edge
+  [
+    source 824
+    target 1251
+  ]
+  edge
+  [
+    source 824
+    target 2159
+  ]
+  edge
+  [
+    source 824
+    target 2639
+  ]
+  edge
+  [
+    source 829
+    target 828
+  ]
+  edge
+  [
+    source 834
+    target 828
+  ]
+  edge
+  [
+    source 834
+    target 834
+  ]
+  edge
+  [
+    source 835
+    target 506
+  ]
+  edge
+  [
+    source 835
+    target 632
+  ]
+  edge
+  [
+    source 835
+    target 740
+  ]
+  edge
+  [
+    source 835
+    target 828
+  ]
+  edge
+  [
+    source 835
+    target 834
+  ]
+  edge
+  [
+    source 835
+    target 835
+  ]
+  edge
+  [
+    source 835
+    target 937
+  ]
+  edge
+  [
+    source 835
+    target 1060
+  ]
+  edge
+  [
+    source 835
+    target 1759
+  ]
+  edge
+  [
+    source 835
+    target 1980
+  ]
+  edge
+  [
+    source 835
+    target 2471
+  ]
+  edge
+  [
+    source 861
+    target 860
+  ]
+  edge
+  [
+    source 865
+    target 860
+  ]
+  edge
+  [
+    source 865
+    target 861
+  ]
+  edge
+  [
+    source 879
+    target 498
+  ]
+  edge
+  [
+    source 879
+    target 878
+  ]
+  edge
+  [
+    source 879
+    target 1871
+  ]
+  edge
+  [
+    source 879
+    target 1902
+  ]
+  edge
+  [
+    source 879
+    target 2142
+  ]
+  edge
+  [
+    source 889
+    target 115
+  ]
+  edge
+  [
+    source 890
+    target 115
+  ]
+  edge
+  [
+    source 890
+    target 889
+  ]
+  edge
+  [
+    source 890
+    target 992
+  ]
+  edge
+  [
+    source 894
+    target 894
+  ]
+  edge
+  [
+    source 894
+    target 896
+  ]
+  edge
+  [
+    source 896
+    target 625
+  ]
+  edge
+  [
+    source 896
+    target 894
+  ]
+  edge
+  [
+    source 896
+    target 1098
+  ]
+  edge
+  [
+    source 930
+    target 929
+  ]
+  edge
+  [
+    source 930
+    target 930
+  ]
+  edge
+  [
+    source 930
+    target 1228
+  ]
+  edge
+  [
+    source 937
+    target 625
+  ]
+  edge
+  [
+    source 937
+    target 937
+  ]
+  edge
+  [
+    source 937
+    target 1098
+  ]
+  edge
+  [
+    source 945
+    target 592
+  ]
+  edge
+  [
+    source 945
+    target 632
+  ]
+  edge
+  [
+    source 945
+    target 834
+  ]
+  edge
+  [
+    source 945
+    target 945
+  ]
+  edge
+  [
+    source 945
+    target 1105
+  ]
+  edge
+  [
+    source 945
+    target 1247
+  ]
+  edge
+  [
+    source 945
+    target 1249
+  ]
+  edge
+  [
+    source 969
+    target 210
+  ]
+  edge
+  [
+    source 969
+    target 775
+  ]
+  edge
+  [
+    source 969
+    target 969
+  ]
+  edge
+  [
+    source 969
+    target 1361
+  ]
+  edge
+  [
+    source 969
+    target 1878
+  ]
+  edge
+  [
+    source 969
+    target 2118
+  ]
+  edge
+  [
+    source 984
+    target 983
+  ]
+  edge
+  [
+    source 984
+    target 1980
+  ]
+  edge
+  [
+    source 995
+    target 115
+  ]
+  edge
+  [
+    source 995
+    target 792
+  ]
+  edge
+  [
+    source 995
+    target 992
+  ]
+  edge
+  [
+    source 1004
+    target 1004
+  ]
+  edge
+  [
+    source 1004
+    target 1006
+  ]
+  edge
+  [
+    source 1006
+    target 1004
+  ]
+  edge
+  [
+    source 1006
+    target 1006
+  ]
+  edge
+  [
+    source 1006
+    target 2413
+  ]
+  edge
+  [
+    source 1006
+    target 2414
+  ]
+  edge
+  [
+    source 1006
+    target 2867
+  ]
+  edge
+  [
+    source 1045
+    target 503
+  ]
+  edge
+  [
+    source 1045
+    target 1044
+  ]
+  edge
+  [
+    source 1045
+    target 1045
+  ]
+  edge
+  [
+    source 1051
+    target 82
+  ]
+  edge
+  [
+    source 1051
+    target 1044
+  ]
+  edge
+  [
+    source 1060
+    target 740
+  ]
+  edge
+  [
+    source 1060
+    target 743
+  ]
+  edge
+  [
+    source 1060
+    target 828
+  ]
+  edge
+  [
+    source 1060
+    target 835
+  ]
+  edge
+  [
+    source 1060
+    target 1054
+  ]
+  edge
+  [
+    source 1060
+    target 1060
+  ]
+  edge
+  [
+    source 1060
+    target 1609
+  ]
+  edge
+  [
+    source 1081
+    target 1081
+  ]
+  edge
+  [
+    source 1231
+    target 503
+  ]
+  edge
+  [
+    source 1231
+    target 743
+  ]
+  edge
+  [
+    source 1231
+    target 1228
+  ]
+  edge
+  [
+    source 1243
+    target 22
+  ]
+  edge
+  [
+    source 1243
+    target 1243
+  ]
+  edge
+  [
+    source 1249
+    target 1247
+  ]
+  edge
+  [
+    source 1249
+    target 1249
+  ]
+  edge
+  [
+    source 1249
+    target 1433
+  ]
+  edge
+  [
+    source 1249
+    target 1605
+  ]
+  edge
+  [
+    source 1249
+    target 2471
+  ]
+  edge
+  [
+    source 1250
+    target 1098
+  ]
+  edge
+  [
+    source 1250
+    target 1231
+  ]
+  edge
+  [
+    source 1250
+    target 1247
+  ]
+  edge
+  [
+    source 1250
+    target 1250
+  ]
+  edge
+  [
+    source 1250
+    target 1437
+  ]
+  edge
+  [
+    source 1250
+    target 2062
+  ]
+  edge
+  [
+    source 1250
+    target 2149
+  ]
+  edge
+  [
+    source 1251
+    target 806
+  ]
+  edge
+  [
+    source 1251
+    target 1825
+  ]
+  edge
+  [
+    source 1251
+    target 1826
+  ]
+  edge
+  [
+    source 1252
+    target 1251
+  ]
+  edge
+  [
+    source 1252
+    target 1744
+  ]
+  edge
+  [
+    source 1252
+    target 2701
+  ]
+  edge
+  [
+    source 1297
+    target 1297
+  ]
+  edge
+  [
+    source 1315
+    target 992
+  ]
+  edge
+  [
+    source 1316
+    target 992
+  ]
+  edge
+  [
+    source 1316
+    target 1315
+  ]
+  edge
+  [
+    source 1324
+    target 1523
+  ]
+  edge
+  [
+    source 1340
+    target 590
+  ]
+  edge
+  [
+    source 1351
+    target 1346
+  ]
+  edge
+  [
+    source 1351
+    target 1351
+  ]
+  edge
+  [
+    source 1385
+    target 2451
+  ]
+  edge
+  [
+    source 1386
+    target 1385
+  ]
+  edge
+  [
+    source 1414
+    target 2203
+  ]
+  edge
+  [
+    source 1437
+    target 592
+  ]
+  edge
+  [
+    source 1437
+    target 1098
+  ]
+  edge
+  [
+    source 1437
+    target 1250
+  ]
+  edge
+  [
+    source 1437
+    target 1433
+  ]
+  edge
+  [
+    source 1437
+    target 1437
+  ]
+  edge
+  [
+    source 1461
+    target 590
+  ]
+  edge
+  [
+    source 1461
+    target 1457
+  ]
+  edge
+  [
+    source 1461
+    target 1871
+  ]
+  edge
+  [
+    source 1461
+    target 1985
+  ]
+  edge
+  [
+    source 1461
+    target 1986
+  ]
+  edge
+  [
+    source 1501
+    target 1500
+  ]
+  edge
+  [
+    source 1523
+    target 104
+  ]
+  edge
+  [
+    source 1523
+    target 1523
+  ]
+  edge
+  [
+    source 1543
+    target 604
+  ]
+  edge
+  [
+    source 1582
+    target 115
+  ]
+  edge
+  [
+    source 1588
+    target 115
+  ]
+  edge
+  [
+    source 1588
+    target 1588
+  ]
+  edge
+  [
+    source 1588
+    target 2003
+  ]
+  edge
+  [
+    source 1605
+    target 506
+  ]
+  edge
+  [
+    source 1605
+    target 2737
+  ]
+  edge
+  [
+    source 1605
+    target 2903
+  ]
+  edge
+  [
+    source 1621
+    target 1618
+  ]
+  edge
+  [
+    source 1671
+    target 279
+  ]
+  edge
+  [
+    source 1702
+    target 115
+  ]
+  edge
+  [
+    source 1702
+    target 2701
+  ]
+  edge
+  [
+    source 1726
+    target 645
+  ]
+  edge
+  [
+    source 1726
+    target 1081
+  ]
+  edge
+  [
+    source 1726
+    target 2282
+  ]
+  edge
+  [
+    source 1727
+    target 645
+  ]
+  edge
+  [
+    source 1759
+    target 828
+  ]
+  edge
+  [
+    source 1759
+    target 1759
+  ]
+  edge
+  [
+    source 1766
+    target 1764
+  ]
+  edge
+  [
+    source 1766
+    target 2956
+  ]
+  edge
+  [
+    source 1772
+    target 1772
+  ]
+  edge
+  [
+    source 1781
+    target 300
+  ]
+  edge
+  [
+    source 1781
+    target 865
+  ]
+  edge
+  [
+    source 1826
+    target 806
+  ]
+  edge
+  [
+    source 1826
+    target 969
+  ]
+  edge
+  [
+    source 1826
+    target 1825
+  ]
+  edge
+  [
+    source 1872
+    target 1871
+  ]
+  edge
+  [
+    source 1872
+    target 2790
+  ]
+  edge
+  [
+    source 1891
+    target 1886
+  ]
+  edge
+  [
+    source 1925
+    target 214
+  ]
+  edge
+  [
+    source 1925
+    target 1588
+  ]
+  edge
+  [
+    source 1925
+    target 1924
+  ]
+  edge
+  [
+    source 1925
+    target 2003
+  ]
+  edge
+  [
+    source 1926
+    target 214
+  ]
+  edge
+  [
+    source 1926
+    target 1924
+  ]
+  edge
+  [
+    source 1926
+    target 1925
+  ]
+  edge
+  [
+    source 1985
+    target 1985
+  ]
+  edge
+  [
+    source 1985
+    target 1986
+  ]
+  edge
+  [
+    source 1986
+    target 1985
+  ]
+  edge
+  [
+    source 1997
+    target 1063
+  ]
+  edge
+  [
+    source 1997
+    target 1997
+  ]
+  edge
+  [
+    source 2003
+    target 1588
+  ]
+  edge
+  [
+    source 2049
+    target 1081
+  ]
+  edge
+  [
+    source 2049
+    target 2049
+  ]
+  edge
+  [
+    source 2062
+    target 1231
+  ]
+  edge
+  [
+    source 2142
+    target 879
+  ]
+  edge
+  [
+    source 2142
+    target 2142
+  ]
+  edge
+  [
+    source 2149
+    target 1250
+  ]
+  edge
+  [
+    source 2192
+    target 740
+  ]
+  edge
+  [
+    source 2192
+    target 2192
+  ]
+  edge
+  [
+    source 2203
+    target 1414
+  ]
+  edge
+  [
+    source 2203
+    target 2203
+  ]
+  edge
+  [
+    source 2205
+    target 104
+  ]
+  edge
+  [
+    source 2205
+    target 1744
+  ]
+  edge
+  [
+    source 2205
+    target 2203
+  ]
+  edge
+  [
+    source 2244
+    target 310
+  ]
+  edge
+  [
+    source 2244
+    target 599
+  ]
+  edge
+  [
+    source 2244
+    target 2244
+  ]
+  edge
+  [
+    source 2289
+    target 2289
+  ]
+  edge
+  [
+    source 2304
+    target 2304
+  ]
+  edge
+  [
+    source 2331
+    target 2331
+  ]
+  edge
+  [
+    source 2331
+    target 2333
+  ]
+  edge
+  [
+    source 2333
+    target 2331
+  ]
+  edge
+  [
+    source 2374
+    target 969
+  ]
+  edge
+  [
+    source 2374
+    target 1766
+  ]
+  edge
+  [
+    source 2374
+    target 1826
+  ]
+  edge
+  [
+    source 2374
+    target 2374
+  ]
+  edge
+  [
+    source 2374
+    target 2956
+  ]
+  edge
+  [
+    source 2397
+    target 2492
+  ]
+  edge
+  [
+    source 2414
+    target 2413
+  ]
+  edge
+  [
+    source 2421
+    target 281
+  ]
+  edge
+  [
+    source 2421
+    target 321
+  ]
+  edge
+  [
+    source 2421
+    target 453
+  ]
+  edge
+  [
+    source 2421
+    target 2420
+  ]
+  edge
+  [
+    source 2421
+    target 2421
+  ]
+  edge
+  [
+    source 2421
+    target 2882
+  ]
+  edge
+  [
+    source 2426
+    target 1759
+  ]
+  edge
+  [
+    source 2434
+    target 684
+  ]
+  edge
+  [
+    source 2501
+    target 0
+  ]
+  edge
+  [
+    source 2501
+    target 2501
+  ]
+  edge
+  [
+    source 2501
+    target 2502
+  ]
+  edge
+  [
+    source 2502
+    target 0
+  ]
+  edge
+  [
+    source 2502
+    target 2501
+  ]
+  edge
+  [
+    source 2625
+    target 2624
+  ]
+  edge
+  [
+    source 2625
+    target 2852
+  ]
+  edge
+  [
+    source 2708
+    target 2708
+  ]
+  edge
+  [
+    source 2737
+    target 1605
+  ]
+  edge
+  [
+    source 2737
+    target 2737
+  ]
+  edge
+  [
+    source 2752
+    target 2752
+  ]
+  edge
+  [
+    source 2752
+    target 2755
+  ]
+  edge
+  [
+    source 2755
+    target 2752
+  ]
+  edge
+  [
+    source 2790
+    target 2790
+  ]
+  edge
+  [
+    source 2867
+    target 2867
+  ]
+]

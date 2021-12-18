@@ -1,0 +1,11 @@
+name: network_analysis
+title:
+username:
+account: kcvis
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5155020
+bundleId: 5266311
+url: https://kcvis.shinyapps.io/network_analysis/
+when: 1637242149.23933
+lastSyncTime: 1637242149.23935
