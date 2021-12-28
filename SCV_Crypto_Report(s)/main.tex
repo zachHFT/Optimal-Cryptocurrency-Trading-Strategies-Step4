@@ -732,105 +732,129 @@ Note that this strategy is built on the pricnicple that more of than not,  Ether
 
 
 \section{Machine Learning Approach}
-Machine learning (ML) is a type of artificial intelligence (AI) that build models to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. Recently, machine learning performs nicely in various predication tasks in various areas. One simple idea is to use techniques in machine learning to predict the price of cryptocurrencies.
+Machine learning (ML) is a type of artificial intelligence (AI) that build models to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. Recently, machine learning performs nicely in various prediction tasks in various areas. Here we will use machine learning techniques to predict, or \textbf{forecast}, the price of cryptocurrencies.
 
-\subsection{Performance evaluation}
-Before we dive into the details of implementation, we need to define a way of giving a numerical score to the the performance of our models. We will use the Root Mean Square Error (RMSE) statistic
-\[\textrm{RMSE} =\sqrt{\frac{\sum_{i=1}^{N}\|y(i)-\hat{y}(i)\|^{2}}{N}},\] where $N$ is the number of data points, $y(i)$ is the i-th measurement of actual data, and $\hat{y}(i)$ is its corresponding prediction.\\
-In machine learning, it is extremely helpful to have a single number to judge a model’s performance, whether it be during training, cross-validation, or monitoring after deployment. Root mean square error is one of the most widely used measures for this. It is a proper scoring rule that is intuitive to understand and compatible with some of the most common statistical assumptions \cite{hyndman2006another}. This statistic measures the Euclidean distance between our prediction and our model, the aim is to get this figure as low as possible, offering an analogy to correctness.  
-
-For the remaining part, the data set we used to train the model is the Kyber Network trading data. but here the data is more granular, here we use 1 hour trading data in lieu of 1 day data to train the model and test the accuracy of our model. Moreover, we keep only two features: \code{Date} and \code{close} (log of close price in an hour). Please see section (\ref{sec:medium}) for the implementation details.
-
-\subsection{LSTM}
-
-Consider the human brain. Humans receive millions of information everyday, but most of these data are soon forgotten; what remained in this period of time is stored in \textit{short term memory}. On the other hand, we retain some knowledge for a longer period of time, stored in long term memory. Inspired by this idea, we will employ neural network model which throws away "less important" data and memorises "more important" data. We call such a model a \textbf{Long Short Term Memory} model, often abbreviated to LSTM.
-% Unlike standard feedforward neural networks, LSTM has feedback connections.
-More precisely, LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. It can process not only single data points (such as images), but also entire sequences of data (such as speech or video). For example, LSTM is applicable to tasks such as unsegmented, connected handwriting recognition, speech recognition and anomaly detection in network traffic or intrusion detection systems.\cite{greff2016lstm}
-
-LSTM networks are well-suited to classifying, processing and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series. LSTMs were developed to deal with the vanishing gradient problem that can be encountered when training traditional RNNs. Relative insensitivity to gap length is an advantage of LSTM over RNNs, hidden Markov models and other sequence learning methods in numerous applications. In practice, a common LSTM unit is composed of a \textit{cell}, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell, see Figure \ref{fig:LSTM} for a schematic.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[scale = 0.4]{Images/LSTM.png}
-    \caption{The procedure of LSTM. We update $h_t$ and $c_t$ at each iteration.}
-    \label{fig:LSTM}
-\end{figure}
+Firstly, we introduce some statistical learning theory to do the price predictions. Statistical learning is a framework for machine learning drawing on theory from statistics and functional analysis -- its aim is to find a predictive function based on known data; it refers to a set of tools for making sense of complex dataset \cite{james2013introduction}.  
 
 
 
-In accordance with the Figure (\ref{fig:LSTM}), and the literature, in Table (\ref{tab:feature}) we define some of the features used in the model.
-\begin{table}[!htbp]
-    \centering
-    \begin{tabular}{rr}
-    \hline 
-    \textbf{Feature} & \textbf{Description} \\
-    \hline
-    $ x_{t} \in \mathbb{R}^{d}$ & Input vector to the LSTM unit\\
-    $f_{t} \in(0,1)^{h}$ & Forget gate's activation vector\\
-    $i_{t} \in(0,1)^{h}$ & Input/update gate's activation vector\\
-    $o_{t} \in(0,1)^{h}$ & Output gate's activation vector\\
-    $h_{t} \in(-1,1)^{h}$ & Hidden state vector also known as output vector of the LSTM unit\\
-    $\tilde{c}_{t} \in(-1,1)^{h}$ & Cell input activation vector\\ 
-    $c_{t} \in \mathbb{R}^{h}$ & Cell state vector\\
-    $W \in \mathbb{R}^{h \times d}$ & Weight matrices that needed to be trained\\
-    $U \in \mathbb{R}^{h \times h}$ & Another weight matrices that needed to be trained \\
-    $b \in \mathbb{R}^{h}$ & Bias vector parameters \\
-    $\sigma_{g}$ & Sigmoid function \\
-    $\sigma_{c}$ & Hyperbolic tangent function \\
-    $\sigma_{h}$ & Hyperbolic tangent function or  $\sigma_{h}(x)=x$\\
-    \hline 
-    \end{tabular} \vspace{-0.2mm}
-    \caption{Summary of the features from our final data frame. The superscripts $d$ and $h$ refer to the number of input features and number of hidden units, respectively The only feature that is obtained via the function of other features is \code{opcl}. This is an important feature for developing strategies.}
-    \label{tab:my_label}
-\end{table}
 
-We define 
+
+
+
+
+
+
+
+\subsection{Linear Regression and its variants}
+Linear regression attempts to predict a \textbf{response variable} variable $\boldsymbol{y} \in \mathbb{R}^n$ as a linear function of some known data in the form of \textbf{explanatory variables}, $\boldsymbol{x}_i \in \mathbb{R}^p$, where $i$ runs from $1$ to some integer $n$. Thus, one postulates that
+
+\[
+\mathbf{y}= X \boldsymbol{\beta}+\boldsymbol{\varepsilon},
+\]
+where
 \[
 \begin{aligned}
-f_{t} &=\sigma_{g}\left(W_{f} x_{t}+U_{f} h_{t-1}+b_{f}\right) \\
-i_{t} &=\sigma_{g}\left(W_{i} x_{t}+U_{i} h_{t-1}+b_{i}\right) \\
-o_{t} &=\sigma_{g}\left(W_{o} x_{t}+U_{o} h_{t-1}+b_{o}\right) \\
-\tilde{c}_{t} &=\sigma_{c}\left(W_{c} x_{t}+U_{c} h_{t-1}+b_{c}\right) \\
-c_{t} &=f_{t} \circ c_{t-1}+i_{t} \circ \tilde{c}_{t} \\
-h_{t} &=o_{t} \circ \sigma_{h}\left(c_{t}\right)
+X=\left(\begin{array}{cc}
+1 & \mathbf{x}_{1}^{\top} \\
+1 & \mathbf{x}_{2}^{\top} \\
+\vdots & \vdots \\
+1 & \mathbf{x}_{n}^{\top}
+\end{array}\right)
 \end{aligned}
 \]
-where the initial values are $c_{0}=0$ and $h_{0}=0$ and the operator o denotes the Hadamard product (element-wise) product. The subscript $t$ indexes the time step. For readers that are interested in this technique, we recommend a book written by Greff on the topic \cite{greff2016lstm}.
+is called the \textbf{design matrix} for the model and $\boldsymbol{\varepsilon} \sim N(\mathbf(0), \sigma^2 I)$, a multivariate normal vector of zero mean and independent components. This latter term embodies the error in our attempt to predict a function using a linear approach -- the data we have may only be reasonably \textit{approximated} by a linear model, we need this error term to account for discrepancies.
+Now, the aim is to estimate $\boldsymbol{\beta}$. A sensible approach for this would be to find the vector $\boldsymbol{\beta}$ such that the ``error" is minimised.
 
-\subsubsection{Strategy and backtesting}
-In this part, we describe the strategy we use to increase the profit via LSTM model. At first, we split the one hour trading data into two parts. The first 80 percent of data is used as training dataset, while the rest 20 percent data are used as testing test. For a certain data, we use the previous 60 data as input and that certain data as output. Then we use LSTM with 60 units and some tuned hyperparameters to train the model.
+\subsubsection{Ordinary least square}
+Ordinary least squares is the most classical form of linear regression. This method aims to minimise the loss function
+\[
+L(D, {\beta})= \|\boldsymbol{\varepsilon}\|=\|X {\beta}-\boldsymbol{y}\|^{2}.
+\]
+If  $X^{\top} X$ is invertible, or equivalently $X$ is of full rank, then the very-well known optimal solution is:
+\[
+{\hat{\beta}}=\left(X^{\top} X\right)^{-1} X^{\top} \boldsymbol{y}.
+\]
+The condition that $X$ be of full rank, corresponds to a set of predictors which are largely uncorrelated. 
 
-After obtaining the model we train, we do the same processing for the testing data and do the prediction. The RMSE is 0.056, which is quite low. See Figure \ref{fig:LSTM price} for the model predictions.
+\subsubsection{Lasso and Ridge regression}
 
+Ridge regression is a method of estimating the coefficients of multiple-regression models in scenarios where independent variables are highly correlated. The optimisation problem is similar to ordinary least squares but with an extra square regularisation term. \textbf{Explain the effect of this term}
 
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[scale = 0.5]{Images/LSTM price.png}
-    \caption{Price of LSTM prediction and the ground truth. It can be seen that our prediction has similar trend to the Ground Truth but not changing that drastically}
-    \label{fig:LSTM price}
-\end{figure}
-
-When is predicting is over, it's time to develop a strategy. The strategy is direct and simple: if we predict that price at next hour is higher, then we buy the KNC. If our model predict that the price at next hour is lower, then we sell the price right now.
-Figure \ref{fig:LSTM PNL} for the realisation of our backtesting. It can be seen that our strategy works nicely and outperforms the baseline in the long run in our testing dataset. Indeed, based on the historical data we are using, our model is most accurate only during a short period of time which coincides with time indices (hours) 1500-2000. Compare this with much earlier in the data set where the prediction gives a significant underestimate. In period predicted with greater accuracy, our strategy is able to earn much money. But in the other time, our model is not much better, performs similar to the market. Overall, our strategy gives us a higher return.
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[scale = 0.7]{Images/LSTM PNL.png}
-    \caption{PNL evolution of our strategy and baseline. It can be seen that at beginning , our strategy perform worse than the baseline. However, our strategy performs much better during the oscillation of the KNC price.}
-    \label{fig:LSTM PNL}
-\end{figure}
-
-
-
-%\subsection{Statistical Learning}
+\[
+\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}+\lambda\|\beta\|_{2}^{2}\right\}
+\]
+Again, the solution to this regularisation problem is well known
+\[
+\widehat{\beta}_{\text {ridge }}=\left(X^{T} X+\lambda I_{p}\right)^{-1} X^{T} y.
+\]
 
 
 
+Lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the resulting statistical model. In Lasso, we have an extra term for regularization as well. But the regularization term is first norm instead of second norm.  The optimization problem is 
+$$
+\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}\right\} \text { subject to }\|\beta\|_{1} \leq t
+$$
+
+In the so-called Lagrangian form:
+$$
+\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}+\lambda\|\beta\|_{1}\right\}
+$$
+
+However, we don't have closed form solution for Lasso. \cite{weisberg2005applied}
 
 
-\subsection{Feature Engineering}
-In the following sections, we will use Statistical learning theory to do the price predictions. Statistical learning is a framework for machine learning drawing from the fields of statistics and functional analysis. Statistical learning theory deals with the problem of finding a predictive function based on data. It refers to a set of tools for making sense of complex
-dataset \cite{james2013introduction}.  Compared with neural network based deep learning, statistical learning has more explainability. Before diving into the details of statistical prediction, we have to do the feature engineering. Feature engineering is the process of using domain knowledge to extract features (characteristics, properties, attributes) from raw data. The motivation is to use these extra features to improve the quality of results from a machine learning process, compared with supplying only the raw data to the machine learning process \cite{heaton2016empirical}. 
 
+\subsection{Support Vector Machine and Random Forrest}
+Another two common used statistical learning method is Support vector machine and random forest. These two methods were used to do classification at its original version. However, they perform perfectly in regression problem as well.
+\subsubsection{support vector machine}
+Recall that in the ordinary least square, we try to minimize the loss function. 
+
+$$
+\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-w_{i} x_{i}\right)^{2}
+$$
+
+Lasso and Ridge regression are all extensions of this simple equation, with an additional penalty parameter that aims to minimize complexity and/or reduce the number of features used in the final model. Regardless, the aim — as with many models — is to reduce the error of the test set. However, what if we are only concerned about reducing error to a certain degree? What if we don’t care how large our errors are, as long as they fall within an acceptable range? 
+
+Enter Support Vector Regression. SVR gives us the flexibility to define how much error is acceptable in our model and will find an appropriate line (or hyperplane in higher dimensions) to fit the data.
+
+In contrast to OLS, the objective function of SVR is to minimize the coefficients — more specifically, the l2-norm of the coefficient vector — not the squared error. The error term is instead handled in the constraints, where we set the absolute error less than or equal to a specified margin, called the maximum error $\epsilon$ . We can tune epsilon to gain the desired accuracy of our model. Our new objective function and constraints are as follows:
+
+$$
+\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-w_{i} x_{i}\right)^{2} \quad \quad \text{subject to } \quad \quad\left|y_{i}-w_{i} x_{i}\right| \leq \varepsilon
+$$
+
+You may quickly realize that this algorithm doesn’t work for all data points. The algorithm solved the objective function as best as possible but some of the points still fall outside the margins. As such, we need to account for the possibility of errors that are larger than $\epsilon$. We can do this with slack variables.
+
+$$
+\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \frac{1}{2}|| \boldsymbol{w}||^{2}+C \sum_{i=1}^{n}\left|\xi_{i}\right| \quad \text{subject to } \quad \left|y_{i}-w_{i} x_{i}\right| \leq \varepsilon+\left|\xi_{i}\right|
+$$
+Choose great hyperparameters then solve this optimization problem gives us the final model. \cite{noble2006support}
+
+
+\subsubsection{Random Forest}
+Random Forest Regression is a supervised learning algorithm that uses ensemble learning method for regression. In short, we train many different decision trees to do the prediction, and then we average these results to get our final model. So after understand decision tree, one would understand random forest.
+
+A decision tree is a supervised machine learning model used to predict a target by learning decision rules from features. As the name suggests, we can think of this model as breaking down our data by making a decision based on asking a series of questions. A decision tree is constructed by recursive partitioning — starting from the root node (known as the first parent), each node can be split into left and right child nodes. These nodes can then be further split and they themselves become parent nodes of their resulting children nodes. Starting from the root, the data is split on the feature that results in the largest Information Gain (IG) (explained in more detail below).  Here, our objective function is to maximize the information gain at each split, which we define as follows:
+
+
+$$
+I G\left(D_{p}, f\right)=I\left(D_{p}\right)-\left(\frac{N_{\text {left }}}{N_{p}} I\left(D_{\text {left }}\right)+\frac{N_{\text {right }}}{N_{p}} I\left(D_{\text {right }}\right)\right)
+$$
+Here, f is the feature to perform the split, Dp, Dleft, and Dright are the datasets of the parent and child nodes, I is the impurity measure, Np is the total number of samples at the parent node, and Nleft and Nright are the number of samples in the child nodes. In the regression task, the impurity measure is the weighted least square
+
+$$
+\operatorname{MSE}(t)=\frac{1}{N_{t}} \sum_{i \in D_{t}}\left(y^{(i)}-\hat{y}_{t}\right)^{2}
+$$
+
+In the random forest, we select different random features to build different decision trees. For predictions, we calculate the predictions for all of the decision trees and average the results in the end. This gives the result of random forest\cite{segal2004machine}.
+
+
+
+
+
+\subsection{Feature engineering}
+In order to make these statistical learning models perform better, we have to do the feature engineering. Feature engineering is the process of using domain knowledge to extract features (characteristics, properties, attributes) from raw data. The motivation is to use these extra features to improve the quality of results from a machine learning process, compared with supplying only the raw data to the machine learning process \cite{heaton2016empirical}. 
 \subsubsection{Filters}
 We filter the data by applying a weighting of observations across time. The
 filters that will be used is the simple moving average (SMA), which weights
@@ -908,150 +932,148 @@ As for the value of m, we again use 50, 100 and 250 days.
 
 Combining all of the features mentioned above, we use them for statistical learning.
 
+\subsection{LSTM}
 
-\subsection{Linear Regression and its variants}
-The first method is a simple but useful techniques: linear regression. linear regression is a linear approach for modelling the relationship between a scalar response and one or more explanatory variables (also known as dependent and independent variables). The case of one explanatory variable is called simple linear regression; for more than one, the process is called multiple linear regression. 
+Consider the human brain. Humans receive millions of information everyday, but most of these data are soon forgotten; what remained in this period of time is stored in \textit{short term memory}. On the other hand, we retain some knowledge for a longer period of time, stored in long term memory. Inspired by this idea, we will employ neural network model which throws away "less important" data and memorises "more important" data. We call such a model a \textbf{Long Short Term Memory} model, often abbreviated to LSTM.
+% Unlike standard feedforward neural networks, LSTM has feedback connections.
+More precisely, LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. It can process not only single data points (such as images), but also entire sequences of data (such as speech or video). For example, LSTM is applicable to tasks such as unsegmented, connected handwriting recognition, speech recognition and anomaly detection in network traffic or intrusion detection systems.\cite{greff2016lstm}
 
-Our model  is built as below:
+LSTM networks are well-suited to classifying, processing and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series. LSTMs were developed to deal with the vanishing gradient problem that can be encountered when training traditional RNNs. Relative insensitivity to gap length is an advantage of LSTM over RNNs, hidden Markov models and other sequence learning methods in numerous applications. In practice, a common LSTM unit is composed of a \textit{cell}, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell, see Figure \ref{fig:LSTM} for a schematic.
 
-$$
-\mathbf{y}=X \boldsymbol{\beta}+\boldsymbol{\varepsilon},
-$$
-where
-$$
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale = 0.4]{Images/LSTM.png}
+    \caption{The procedure of LSTM. We update $h_t$ and $c_t$ at each iteration.}
+    \label{fig:LSTM}
+\end{figure}
+
+
+
+In accordance with the Figure (\ref{fig:LSTM}), and the literature, in Table (\ref{tab:feature}) we define some of the features used in the model.
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{rr}
+    \hline 
+    \textbf{Feature} & \textbf{Description} \\
+    \hline
+    $ x_{t} \in \mathbb{R}^{d}$ & Input vector to the LSTM unit\\
+    $f_{t} \in(0,1)^{h}$ & Forget gate's activation vector\\
+    $i_{t} \in(0,1)^{h}$ & Input/update gate's activation vector\\
+    $o_{t} \in(0,1)^{h}$ & Output gate's activation vector\\
+    $h_{t} \in(-1,1)^{h}$ & Hidden state vector also known as output vector of the LSTM unit\\
+    $\tilde{c}_{t} \in(-1,1)^{h}$ & Cell input activation vector\\ 
+    $c_{t} \in \mathbb{R}^{h}$ & Cell state vector\\
+    $W \in \mathbb{R}^{h \times d}$ & Weight matrices that needed to be trained\\
+    $U \in \mathbb{R}^{h \times h}$ & Another weight matrices that needed to be trained \\
+    $b \in \mathbb{R}^{h}$ & Bias vector parameters \\
+    $\sigma_{g}$ & Sigmoid function \\
+    $\sigma_{c}$ & Hyperbolic tangent function \\
+    $\sigma_{h}$ & Hyperbolic tangent function or  $\sigma_{h}(x)=x$\\
+    \hline 
+    \end{tabular} \vspace{-0.2mm}
+    \caption{Summary of the features from our final data frame. The superscripts $d$ and $h$ refer to the number of input features and number of hidden units, respectively The only feature that is obtained via the function of other features is \code{opcl}. This is an important feature for developing strategies.}
+    \label{tab:my_label}
+\end{table}
+
+We define 
+\[
 \begin{aligned}
-&\mathbf{y}=\left(\begin{array}{c}
-y_{1} \\
-y_{2} \\
-\vdots \\
-y_{n}
-\end{array}\right), 
-X=\left(\begin{array}{c}
-\mathbf{x}_{1}^{\top} \\
-\mathbf{x}_{2}^{\top} \\
-\vdots \\
-\mathbf{x}_{n}^{\top}
-\end{array}\right)=\left(\begin{array}{ccccc}
-1 & x_{11} & \cdots & x_{1 p} \\
-1 & x_{21} & \cdots & x_{2 p} \\
-\vdots & \vdots & \ddots & \vdots \\
-1 & x_{n 1} & \cdots & x_{n p}
-\end{array}\right), \\
-&\boldsymbol{\beta}=\left(\begin{array}{c}
-\beta_{0} \\
-\beta_{1} \\
-\beta_{2} \\
-\vdots \\
-\beta_{p}
-\end{array}\right), \quad \boldsymbol{\varepsilon}=\left(\begin{array}{c}
-\varepsilon_{1} \\
-\varepsilon_{2} \\
-\vdots \\
-\varepsilon_{n}
-\end{array}\right) .
+f_{t} &=\sigma_{g}\left(W_{f} x_{t}+U_{f} h_{t-1}+b_{f}\right) \\
+i_{t} &=\sigma_{g}\left(W_{i} x_{t}+U_{i} h_{t-1}+b_{i}\right) \\
+o_{t} &=\sigma_{g}\left(W_{o} x_{t}+U_{o} h_{t-1}+b_{o}\right) \\
+\tilde{c}_{t} &=\sigma_{c}\left(W_{c} x_{t}+U_{c} h_{t-1}+b_{c}\right) \\
+c_{t} &=f_{t} \circ c_{t-1}+i_{t} \circ \tilde{c}_{t} \\
+h_{t} &=o_{t} \circ \sigma_{h}\left(c_{t}\right)
 \end{aligned}
-$$
-
-We find a good $\boldsymbol{\beta}$ that minimize the norm of $\epsilon$. It is equivalent to minimize a loss function
-\subsubsection{Ordinary least square}
-In the ordinary least square, the most classical linear regression, we minimize the cost function as below
-$$
-L(D, {\beta})=\|X {\beta}-y\|^{2}
-$$
-
-If  $\left(X^{\top} X\right)$ is invertible, then the optimal solution is:
-$$
-{\hat{\beta}}=\left(X^{\top} X\right)^{-1} X^{\top} y
-$$
-\subsubsection{Lasso and Ridge regression}
-
-Ridge regression is a method of estimating the coefficients of multiple-regression models in scenarios where independent variables are highly correlated. The optimization problem is similar to the ordinary least square but with an extra square regularization term. 
-
-$$
-\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}+\lambda\|\beta\|_{2}^{2}\right\}
-$$
-It has a nice closed form solution
-$$
-\widehat{\beta}_{\text {ridge }}=\left(X^{T} X+\lambda I_{p}\right)^{-1} X^{T} y
-$$
-
-
-
-Lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the resulting statistical model. In Lasso, we have an extra term for regularization as well. But the regularization term is first norm instead of second norm.  The optimization problem is 
-$$
-\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}\right\} \text { subject to }\|\beta\|_{1} \leq t
-$$
-
-In the so-called Lagrangian form:
-$$
-\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}+\lambda\|\beta\|_{1}\right\}
-$$
-
-However, we don't have closed form solution for Lasso. \cite{weisberg2005applied}
-
-
-
-\subsection{Support Vector Machine and Random Forrest}
-Another two common used statistical learning method is Support vector machine and random forest. These two methods were used to do classification at its original version. However, they perform perfectly in regression problem as well.
-\subsubsection{support vector machine}
-Recall that in the ordinary least square, we try to minimize the loss function. 
-
-$$
-\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-w_{i} x_{i}\right)^{2}
-$$
-
-Lasso and Ridge regression are all extensions of this simple equation, with an additional penalty parameter that aims to minimize complexity and/or reduce the number of features used in the final model. Regardless, the aim — as with many models — is to reduce the error of the test set. However, what if we are only concerned about reducing error to a certain degree? What if we don’t care how large our errors are, as long as they fall within an acceptable range? 
-
-Enter Support Vector Regression. SVR gives us the flexibility to define how much error is acceptable in our model and will find an appropriate line (or hyperplane in higher dimensions) to fit the data.
-
-In contrast to OLS, the objective function of SVR is to minimize the coefficients — more specifically, the l2-norm of the coefficient vector — not the squared error. The error term is instead handled in the constraints, where we set the absolute error less than or equal to a specified margin, called the maximum error $\epsilon$ . We can tune epsilon to gain the desired accuracy of our model. Our new objective function and constraints are as follows:
-
-$$
-\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-w_{i} x_{i}\right)^{2} \quad \quad \text{subject to } \quad \quad\left|y_{i}-w_{i} x_{i}\right| \leq \varepsilon
-$$
-
-You may quickly realize that this algorithm doesn’t work for all data points. The algorithm solved the objective function as best as possible but some of the points still fall outside the margins. As such, we need to account for the possibility of errors that are larger than $\epsilon$. We can do this with slack variables.
-
-$$
-\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \frac{1}{2}|| \boldsymbol{w}||^{2}+C \sum_{i=1}^{n}\left|\xi_{i}\right| \quad \text{subject to } \quad \left|y_{i}-w_{i} x_{i}\right| \leq \varepsilon+\left|\xi_{i}\right|
-$$
-Choose great hyperparameters then solve this optimization problem gives us the final model. \cite{noble2006support}
-
-
-\subsubsection{Random Forest}
-Random Forest Regression is a supervised learning algorithm that uses ensemble learning method for regression. In short, we train many different decision trees to do the prediction, and then we average these results to get our final model. So after understand decision tree, one would understand random forest.
-
-A decision tree is a supervised machine learning model used to predict a target by learning decision rules from features. As the name suggests, we can think of this model as breaking down our data by making a decision based on asking a series of questions. A decision tree is constructed by recursive partitioning — starting from the root node (known as the first parent), each node can be split into left and right child nodes. These nodes can then be further split and they themselves become parent nodes of their resulting children nodes. Starting from the root, the data is split on the feature that results in the largest Information Gain (IG) (explained in more detail below).  Here, our objective function is to maximize the information gain at each split, which we define as follows:
-
-
-$$
-I G\left(D_{p}, f\right)=I\left(D_{p}\right)-\left(\frac{N_{\text {left }}}{N_{p}} I\left(D_{\text {left }}\right)+\frac{N_{\text {right }}}{N_{p}} I\left(D_{\text {right }}\right)\right)
-$$
-Here, f is the feature to perform the split, Dp, Dleft, and Dright are the datasets of the parent and child nodes, I is the impurity measure, Np is the total number of samples at the parent node, and Nleft and Nright are the number of samples in the child nodes. In the regression task, the impurity measure is the weighted least square
-
-$$
-\operatorname{MSE}(t)=\frac{1}{N_{t}} \sum_{i \in D_{t}}\left(y^{(i)}-\hat{y}_{t}\right)^{2}
-$$
-
-In the random forest, we select different random features to build different decision trees. For predictions, we calculate the predictions for all of the decision trees and average the results in the end. This gives the result of random forest\cite{segal2004machine}.
-
+\]
+where the initial values are $c_{0}=0$ and $h_{0}=0$ and the operator o denotes the Hadamard product (element-wise) product. The subscript $t$ indexes the time step. For readers that are interested in this technique, we recommend a book written by Greff on the topic \cite{greff2016lstm}.
 
 
 
 
 \subsection{Prediction and Backtesting}
-After introducing these methods, we implemented them and develop strategies to earn extra money.
+After introducing these methods, we implemented them and developed strategies to earn extra money. At first, we introduce the dataset we use and how we preprocess them. 
+
+The data set we used to train the model is the Kyber Network trading data. But here the data is more granular, here we use 1 hour trading data in lieu of 1 day data to train the model and test the accuracy of our model.  We split the one hour trading data into two parts. The first 80 percent of data is used as training dataset, while the rest 20 percent data are used as testing test. For the LSTM model, we keep only two features: \code{Date} and \code{close} (log of close price in an hour). For a certain data, we use the close price of previous 60 data as input and the close price of that certain data as output.   Please see section (\ref{sec:medium}) for the implementation details.For other machine learning models, we use all features we obtained from Feature engineering part. For a certain data, we use the features we got above and the close price of the previous 10 data as input and the same features of that certain data as output.
+
+
+In order to compare the performances of these models, we need to define a way of giving a numerical score to the the performance of our models. We will use the Root Mean Square Error (RMSE) statistic
+\[\textrm{RMSE} =\sqrt{\frac{\sum_{i=1}^{N}\|y(i)-\hat{y}(i)\|^{2}}{N}},\] where $N$ is the number of data points, $y(i)$ is the i-th measurement of actual data, and $\hat{y}(i)$ is its corresponding prediction.\\
+In machine learning, it is extremely helpful to have a single number to judge a model’s performance, whether it be during training, cross-validation, or monitoring after deployment. Root mean square error is one of the most widely used measures for this. It is a proper scoring rule that is intuitive to understand and compatible with some of the most common statistical assumptions \cite{hyndman2006another}. This statistic measures the Euclidean distance between our prediction and our model, the aim is to get this figure as low as possible, offering an analogy to correctness.  
+
+After using grid search to tune the hyperparameters, we trained a model with our training data. After obtaining the model we train, we do the same processing for the testing data and do the prediction.
+See table \ref{tab:RMSE} for the details of the RMSE given by these models. See figure (\ref{fig:LSTM price}) to find out the prediction of LSTM model. We see that the prediction is not changing that drastically compared with the ground truth. Another example is from the ordinary least square linear regression. Please see figure \ref{fig:OLS price} for the prediction of Ordinary least square linear regression. 
+
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+        Model & RMSE\\ \hline
+         OLS Linear Regression& 0.013         \\
+         Lasso& 0.026\\
+         Ridge Regression& 0.028\\
+         Support Vector Machine& 0.011      \\
+         Random Forest &  0.015       \\
+         LSTM & 0.056\\
+    \hline
+    \end{tabular}
+    \caption{RMSE for different models. As can be seen here, the linear SVM has the lowest RMSE, while the LSTM has the highest RMSE. These values are relatively small, which means that our predictions are close to the ground truth value}
+    \label{tab:RMSE}
+\end{table}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale = 0.65]{Images/OLS price prediction.png}
+    \caption{Price of ordinary least squre linear regression. It can be seen from the figure that our prediction are very very close to the ground truth expect for a few points.}
+    \label{fig:OLS price}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale = 0.5]{Images/LSTM price.png}
+    \caption{Price of LSTM prediction and the ground truth. It can be seen that our prediction has similar trend to the Ground Truth but not changing that drastically}
+    \label{fig:LSTM price}
+\end{figure}
+
+
+When predicting is over, it's time to develop a strategy. The strategy is direct and simple: if we predict that price at next hour is higher and we don't have KNC right now, then we buy the KNC. If our model predict that the price at next hour is lower and we have KNC right now, then we sell the price right now. We implemented this strategy and did backtesting for all of these models.
+Figure \ref{fig:LSTM PNL} for the realisation of our backtesting of LSTM. It can be seen that our strategy works nicely and outperforms the baseline in the long run in our testing dataset. Indeed, based on the historical data we are using, our model is most accurate only during a short period of time which coincides with time indices (hours) 1500-2000. Compare this with much earlier in the data set where the prediction gives a significant underestimate. In period predicted with greater accuracy, our strategy is able to earn much money. But in the other time, our model is not much better, performs similar to the market. Overall, our strategy gives us a higher return.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale = 0.7]{Images/LSTM PNL.png}
+    \caption{PNL evolution of LSTM model and baseline. It can be seen that at beginning , our strategy perform worse than the baseline. However, our strategy performs much better during the oscillation of the KNC price.}
+    \label{fig:LSTM PNL}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.528]{Images/pnl for linear regression.png}
+    \caption{PNL evolution of ordinary least square, lasso and ridge regression model and baseline. We put them together as they are all linear regression based methods. It can be seen that all these three methods outperform the baseline in the long run, while ridge regression has the highest return in the end. We also notice that even though the Lasso is worse than the baseline for a majority of time, It has a very low retracement.  }
+    \label{fig:LR PNL}
+\end{figure}
 
 
 
-
-
-
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.6]{Images/PNL SVM RF.png}
+    \caption{PNL evolution of random forest and SVM model. Notice that the SVM model is much better than the random forest method according to the final return. It is worth mentioning that the SVM model is very nice in the second half of the testing data}
+    \label{fig:SVMRF PNL}
+\end{figure}
 
 
 
 
 \subsection{Discussion and analysis}
+For all of the methods we have, they perform better than the baseline strategy and is able to earn more money. At beginning, our guess is that this backtesting return should be related to the RMSE. As the smaller the RMSE is, the closer our prediction is, we guess that lower RMSE leads to a higher final return. However, we saw that the LSTM model has the largest final return while it has the largest RMSE. On the other hand, the SVM model has the lowest RMSE while it has the second largest final return. Notice that the Ordinary least square linear regression has the second smallest RMSE but has the lowest final return. From these results, we think it's hard to find a direct relationship between final PNL and the RMSE of a model.
+
+
+
+
+
+
 
 
 
