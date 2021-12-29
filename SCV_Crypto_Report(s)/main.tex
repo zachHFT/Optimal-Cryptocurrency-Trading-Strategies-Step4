@@ -747,10 +747,10 @@ Firstly, we introduce some statistical learning theory to do the price predictio
 
 
 \subsection{Linear Regression and its variants}
-Linear regression attempts to predict a \textbf{response variable} variable $\boldsymbol{y} \in \mathbb{R}^n$ as a linear function of some known data in the form of \textbf{explanatory variables}, $\boldsymbol{x}_i \in \mathbb{R}^p$, where $i$ runs from $1$ to some integer $n$. Thus, one postulates that
+Linear regression attempts to predict a \textbf{response variable} variable $y \in \mathbb{R}^n$ as a linear function of some known data in the form of \textbf{explanatory variables}, $\boldsymbol{x}_i \in \mathbb{R}^p$, where $i$ runs from $1$ to some integer $n$. Thus, one postulates that
 
 \[
-\mathbf{y}= X \boldsymbol{\beta}+\boldsymbol{\varepsilon},
+y= X \boldsymbol{\beta}+\boldsymbol{\varepsilon},
 \]
 where
 \[
@@ -763,23 +763,23 @@ X=\left(\begin{array}{cc}
 \end{array}\right)
 \end{aligned}
 \]
-is called the \textbf{design matrix} for the model and $\boldsymbol{\varepsilon} \sim N(\mathbf(0), \sigma^2 I)$, a multivariate normal vector of zero mean and independent components. This latter term embodies the error in our attempt to predict a function using a linear approach -- the data we have may only be reasonably \textit{approximated} by a linear model, we need this error term to account for discrepancies.
+is called the \textbf{design matrix} for the model and $\boldsymbol{\varepsilon} \sim N(\mathbf{0}, \sigma^2 I)$, a multivariate normal vector of zero mean and independent components. This latter term embodies the error in our attempt to predict a function using a linear approach -- the data we have may only be reasonably \textit{approximated} by a linear model, we need this error term to account for discrepancies.
 Now, the aim is to estimate $\boldsymbol{\beta}$. A sensible approach for this would be to find the vector $\boldsymbol{\beta}$ such that the ``error" is minimised.
 
-\subsubsection{Ordinary least square}
+\subsubsection{Ordinary least squares (OLS)}
 Ordinary least squares is the most classical form of linear regression. This method aims to minimise the loss function
 \[
-L(D, {\beta})= \|\boldsymbol{\varepsilon}\|=\|X {\beta}-\boldsymbol{y}\|^{2}.
+L({\beta})= \|\boldsymbol{\varepsilon}\|=\|X {\beta}-y\|^{2},
 \]
-If  $X^{\top} X$ is invertible, or equivalently $X$ is of full rank, then the very-well known optimal solution is:
+which intuitively minimises the amount of error intrinsic to the model. If  $X^{\top} X$ is invertible, or equivalently $X$ is of full rank, then the very-well known optimal solution is:
 \[
-{\hat{\beta}}=\left(X^{\top} X\right)^{-1} X^{\top} \boldsymbol{y}.
+{\hat{\beta}}=\left(X^{\top} X\right)^{-1} X^{\top} y.
 \]
 The condition that $X$ be of full rank, corresponds to a set of predictors which are largely uncorrelated. 
 
 \subsubsection{Lasso and Ridge regression}
 
-Ridge regression is a method of estimating the coefficients of multiple-regression models in scenarios where independent variables are highly correlated. The optimisation problem is similar to ordinary least squares but with an extra square regularisation term. \textbf{Explain the effect of this term}
+Ridge regression is a method of estimating the coefficients of multiple-regression models in scenarios where independent variables are highly correlated. The optimisation problem is similar to ordinary least squares but with an extra squared regularisation term, which acts to penalise the coefficients $\boldsymbol{\beta}$ to avoid overfitting when the features are well correlated. 
 
 \[
 \min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}+\lambda\|\beta\|_{2}^{2}\right\}
@@ -791,146 +791,143 @@ Again, the solution to this regularisation problem is well known
 
 
 
-Lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the resulting statistical model. In Lasso, we have an extra term for regularization as well. But the regularization term is first norm instead of second norm.  The optimization problem is 
-$$
-\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}\right\} \text { subject to }\|\beta\|_{1} \leq t
-$$
-
-In the so-called Lagrangian form:
-$$
-\min _{\beta \in \mathbb{R}^{p}}\left\{\frac{1}{N}\|y-X \beta\|_{2}^{2}+\lambda\|\beta\|_{1}\right\}
-$$
-
-However, we don't have closed form solution for Lasso. \cite{weisberg2005applied}
+Lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the resulting statistical model. In Lasso, we have an extra term for regularization as well. But the regularization term is first norm instead of second norm.  The optimization problem is to minimise 
+\[
+\min _{\boldsymbol{\beta} \in \mathbb{R}^{p}}\left\{\frac{1}{n}\|y-X \boldsymbol{\beta}\|_{2}^{2}\right\} \text { subject to }\|\boldsymbol{\beta}\|_{1} \leq t,
+\]
+or alternatively in the so-called Lagrangian form:
+\[
+\min _{\boldsymbol{\beta} \in \mathbb{R}^{p}}\left\{\frac{1}{n}\|y-X \boldsymbol{\beta}\|_{2}^{2}+\lambda\|\boldsymbol{\beta}\|_{1}\right\}.
+\]
+Intuitionally, the regularisation term here limits the amount of overfitting, as when $\lambda$ increases, we get more variables with zero coefficients. However, we don't have closed form solution for Lasso, and must solve the optimisation problem numerically \cite{weisberg2005applied}.
 
 
 
-\subsection{Support Vector Machine and Random Forrest}
-Another two common used statistical learning method is Support vector machine and random forest. These two methods were used to do classification at its original version. However, they perform perfectly in regression problem as well.
-\subsubsection{support vector machine}
+\subsection{Support Vector Machine and Random Forests}
+Support vector machines and random forests were originally conceived to solve machine learning problems in \textbf{classification}, meaning the response variable is categorical. Although, they can be used in regression problems as well.
+
+\subsubsection{Support Vector Machines}
 Recall that in the ordinary least square, we try to minimize the loss function. 
 
-$$
-\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-w_{i} x_{i}\right)^{2}
-$$
+\[
+\min_{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-\boldsymbol{w}^{\top} \boldsymbol{x}_{i}\right)^{2}
+\]
 
-Lasso and Ridge regression are all extensions of this simple equation, with an additional penalty parameter that aims to minimize complexity and/or reduce the number of features used in the final model. Regardless, the aim — as with many models — is to reduce the error of the test set. However, what if we are only concerned about reducing error to a certain degree? What if we don’t care how large our errors are, as long as they fall within an acceptable range? 
+Lasso and Ridge regression are all extensions of this simple equation, with an additional penalty parameter that aims to reduce complexity and the number of features used in the final model. Regardless, the aim — as with many models — is to reduce the error of the prediction. However, what if we are only concerned about reducing error to a certain extent? What if we don’t care how large our errors are, as long as they fall within an acceptable range? 
 
-Enter Support Vector Regression. SVR gives us the flexibility to define how much error is acceptable in our model and will find an appropriate line (or hyperplane in higher dimensions) to fit the data.
-
-In contrast to OLS, the objective function of SVR is to minimize the coefficients — more specifically, the l2-norm of the coefficient vector — not the squared error. The error term is instead handled in the constraints, where we set the absolute error less than or equal to a specified margin, called the maximum error $\epsilon$ . We can tune epsilon to gain the desired accuracy of our model. Our new objective function and constraints are as follows:
+Enter Support Vector Regression (SVR). SVR gives us the flexibility to define how much error is acceptable in our model and will find an appropriate line (or hyperplane in higher dimensions) to fit the data. In contrast to OLS, the objective function of SVR is to minimise $L_2$ norm of the coefficient vector — not the squared error. The error term is instead handled by some imposed constraints, where we set the absolute error less than or equal to a specified margin, called the maximum error $\epsilon$ . We can tune epsilon to gain the desired accuracy of our model. Our new objective function and constraints are thus:
 
 $$
-\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-w_{i} x_{i}\right)^{2} \quad \quad \text{subject to } \quad \quad\left|y_{i}-w_{i} x_{i}\right| \leq \varepsilon
+\min _{\boldsymbol{w} \in \mathbb{R}^{p}} \sum_{i=1}^{n}\left(y_{i}-\boldsymbol{w}^{\top} \boldsymbol{x}_i\right)^{2} \quad \quad \text{subject to } \quad \quad\left|y_{i}-\boldsymbol{w}^{\top} \boldsymbol{x}_i\right| \leq \varepsilon
 $$
 
-You may quickly realize that this algorithm doesn’t work for all data points. The algorithm solved the objective function as best as possible but some of the points still fall outside the margins. As such, we need to account for the possibility of errors that are larger than $\epsilon$. We can do this with slack variables.
+You may quickly realize that this algorithm doesn’t work for all data points. The algorithm solved the objective function as best as possible but some of the points still fall outside the margins. As such, we need to account for the possibility of errors that are larger than $\varepsilon$. We can do this with slack variables, $\xi_i$.
 
-$$
+\[
 \min _{\boldsymbol{w} \in \mathbb{R}^{p}} \frac{1}{2}|| \boldsymbol{w}||^{2}+C \sum_{i=1}^{n}\left|\xi_{i}\right| \quad \text{subject to } \quad \left|y_{i}-w_{i} x_{i}\right| \leq \varepsilon+\left|\xi_{i}\right|
-$$
-Choose great hyperparameters then solve this optimization problem gives us the final model. \cite{noble2006support}
+\]
+Choosing great hyperparameters then solve this optimization problem is the challenge which remains \cite{noble2006support}.
 
 
-\subsubsection{Random Forest}
-Random Forest Regression is a supervised learning algorithm that uses ensemble learning method for regression. In short, we train many different decision trees to do the prediction, and then we average these results to get our final model. So after understand decision tree, one would understand random forest.
+\subsubsection{Random Forests}
+Random Forest Regression is a supervised learning algorithm that uses ensemble learning methods for regression. In short, we train many different decision trees to do the prediction, and then we average these results to get our final model. Let us first present what is meant by a decision tree. 
 
-A decision tree is a supervised machine learning model used to predict a target by learning decision rules from features. As the name suggests, we can think of this model as breaking down our data by making a decision based on asking a series of questions. A decision tree is constructed by recursive partitioning — starting from the root node (known as the first parent), each node can be split into left and right child nodes. These nodes can then be further split and they themselves become parent nodes of their resulting children nodes. Starting from the root, the data is split on the feature that results in the largest Information Gain (IG) (explained in more detail below).  Here, our objective function is to maximize the information gain at each split, which we define as follows:
+A decision tree is a supervised machine learning model used to predict a target by learning decision rules from features. As the name suggests, we can think of this model as breaking down our data by making a decision based on asking a series of questions. A decision tree is constructed by recursive partitioning — starting from the root node (known as the first parent), each node can be split into left and right child nodes. These nodes can then be further split and they themselves become parent nodes of their resulting children nodes. Starting from the root, the data is split on the feature that results in the largest Information Gain (IG) (explained in more detail below). Here, our objective function is to maximize the information gain at each split, which we define as follows:
 
 
 $$
 I G\left(D_{p}, f\right)=I\left(D_{p}\right)-\left(\frac{N_{\text {left }}}{N_{p}} I\left(D_{\text {left }}\right)+\frac{N_{\text {right }}}{N_{p}} I\left(D_{\text {right }}\right)\right)
 $$
-Here, f is the feature to perform the split, Dp, Dleft, and Dright are the datasets of the parent and child nodes, I is the impurity measure, Np is the total number of samples at the parent node, and Nleft and Nright are the number of samples in the child nodes. In the regression task, the impurity measure is the weighted least square
+Here, $f$ is the feature to perform the split, $Dp$, $D_{\text{left}}$, and $D_{\text{right}}$ are the data sets of the parent and child nodes, $I$ is the impurity measure, $Np$ is the total number of samples at the parent node, and $N_{\text{left}}$ and $N_{\text{right}}$ are the number of samples in the child nodes. In the regression task, the impurity measure is the weighted least squares
 
-$$
-\operatorname{MSE}(t)=\frac{1}{N_{t}} \sum_{i \in D_{t}}\left(y^{(i)}-\hat{y}_{t}\right)^{2}
-$$
+\[
+\operatorname{MSE}(t)=\frac{1}{N_{t}} \sum_{i \in D_{t}}\left(y^{(i)}-\hat{y}_{t}\right)^{2}.
+\]
 
-In the random forest, we select different random features to build different decision trees. For predictions, we calculate the predictions for all of the decision trees and average the results in the end. This gives the result of random forest\cite{segal2004machine}.
+In the random forest, we select different random features to build different decision trees. For predictions, we calculate the predictions for all of the decision trees and average the results in the end. This gives the result of random forest \cite{segal2004machine}.
 
 
 
 
 
 \subsection{Feature engineering}
-In order to make these statistical learning models perform better, we have to do the feature engineering. Feature engineering is the process of using domain knowledge to extract features (characteristics, properties, attributes) from raw data. The motivation is to use these extra features to improve the quality of results from a machine learning process, compared with supplying only the raw data to the machine learning process \cite{heaton2016empirical}. 
+In order to make these statistical learning models perform as best as possible, we have to carry out a process known as feature engineering. It is the process of using domain knowledge to extract features (characteristics, properties, attributes) from raw data. The motivation is to use these extra features to improve the quality of results from a machine learning process, compared with supplying only the raw data to the machine learning process \cite{heaton2016empirical}. 
 \subsubsection{Filters}
 We filter the data by applying a weighting of observations across time. The
 filters that will be used is the simple moving average (SMA), which weights
-observations equally across a rolling time window, and the exponential moving average (EMA) which decays the weights on each observations exponentially in time. \cite{brockwell2016introduction} We regard the financial data as a signal and we use filters to extract important information.
+observations equally across a rolling time window, and the exponential moving average (EMA) which decays the weights on each observations exponentially in time \cite{brockwell2016introduction}. We regard the financial data as a signal and we use filters to extract important information.
 
 
-The simple moving average applies an equal weight to all predictions within the rolling window, and is thus the average of the m last days of the time series $\{X_t\}$.
-$$
-\operatorname{SMA}\left(\left\{X_{t}\right\}, m\right)=\frac{1}{m} \sum_{i=0}^{m-1} X_{t-i}
-$$
-Or equivalently
-$$
-\operatorname{SMA}\left(\left\{X_{t}\right\}, m\right)=\operatorname{SMA}\left(\left\{X_{t-1}\right\}, m\right)+\frac{1}{m}\left(X_{t}-X_{t-m}\right)
-$$
+The simple moving average applies an equal weight to all predictions within the rolling window, and is thus the average of the $m$ last days of the time series $\{X_t\}$.
+\[
+\operatorname{SMA}\left(\left\{X_{t}\right\}, m\right)=\frac{1}{m} \sum_{i=0}^{m-1} X_{t-i},
+\]
 
+or equivalently,
+
+\[
+\operatorname{SMA}\left(\left\{X_{t}\right\}, m\right)=\operatorname{SMA}\left(\left\{X_{t-1}\right\}, m\right)+\frac{1}{m}\left(X_{t}-X_{t-m}\right).
+\]
 The simple moving average weights all observations equally, even though we often consider recent observations to be more relevant. In contrast, the exponential moving average decays the weights of older observations. This can be defined recursively as
 
-$$
+\[
 \operatorname{EMA}\left(\left\{X_{t}\right\}, \alpha\right)=\left\{\begin{array}{l}
 X_{0}, \text { if } t=0, \\
 \alpha X_{t}+(1-\alpha) \operatorname{EMA}\left(\left\{X_{t-1}\right\}, \alpha\right), \text { if } t>0,
 \end{array}\right.
-$$
+\]
 
-for any $\alpha \in [0,1]$. One common choice is $\alpha = \frac{1}{1+m}$ for some m, which lets m represent the filters center of mass.
+for any $\alpha \in [0,1]$. One common choice is $\alpha = (1+m)^{-1}$ for some $m$, which lets $m$ represents the filter's center of mass.
 
 
 \subsubsection{Momentum}
-Momentum is defined as the m day lagged difference in closing prices:
-$$
+Momentum is defined as the $m$ day lagged difference in closing prices:
+\[
 \operatorname{Momentum}\left(\left\{C_{t}\right\}, m\right)=C_{t}-C_{t-m},
-$$
-where $C_t$ is the close price at time $t$. This can be interpreted as an indication of trend in the time series, where positive values indicate an upwards trend in prices. As for the parameter m,
-we use values 50, 100 and 250.
+\]
+where $C_t$ is the close price at time $t$. This can be interpreted as an indication of trend in the time series, where positive values indicate an upwards trend in prices. For the parameter $m$, we will use values $50$, $100$ and $250$.
 
 
 \subsubsection{Commodity Channel Index}
 The Commodity Channel Index (CCI) is defined as:
-$$
+\[
 X_{t}=\frac{C_{t}+H_{t}+L_{t}}{3},
-$$
+\]
 
-$$
+\[
 C C I(m)=\frac{X_{t}-S M A\left(\left\{X_{t}\right\}, m\right)}{S M A\left(\left\{\left|X_{t}-S M A\left(\left\{X_{t}\right\}, m\right)\right|\right\}, m\right)}
-$$
-Here, $H_t$ is the highest price of a certain period, $\L_t$ is the lowest price of a certain period.  For the parameter m, we use 50, 100 and 250 days.
+\]
+Here, $H_t$ is the highest price of a certain period, $L_t$ is the lowest price of a certain period.  For the parameter $m$, we use $50, 100$ and $250$ days.
 
 \subsubsection{Exponential Moving Average}
 The Exponential Moving Average feature (EMAF) is defined here as the
 difference of two exponential moving averages over normalized closing prices,
 with different lag. Thus, it is defined as:
 
-$$
+\[
 E M A F\left(\left\{C_{t}\right\}, m, n\right)=E M A\left(\left\{C_{t}\right\}, m\right)-E M A\left(\left\{C_{t}\right\}, n\right),
-$$
+\]
 where m < n. The values for (m, n) are set as (30, 100),(50, 200) and (50, 250).
 
 
 \subsubsection{Relative Strength Index}
 The Relative Strength Index (RSI) is defined using the ratio of upward movements to downward movements, using simple moving averages:
 
-$$
+\[
 \begin{aligned}
 \Delta C_{t} &=C_{t}-C_{t-1}, \\
 U_{t} &=\Delta C_{t} \mathbf{1}_{\Delta C_{t} \geq 0}, \\
 D_{t} &=\Delta C_{t} \mathbf{1}_{\Delta C_{t}<0},
 \end{aligned}
-$$
+\]
 
-where $\mathbf{1}_{\Delta C_{t} \geq 0}$equals 1 if the return is non-negative, and 0 otherwise. Using this, the RSI is defined as:
-$$
+where $\mathbf{1}_{\Delta C_{t} \geq 0}$ equals $1$ if the return is non-negative, and $0$ otherwise. Using this, the RSI is defined as:
+\[
 R S I(m)=1-\frac{1}{1+\frac{S M A\left(\left\{U_{t}\right\}, m\right)}{S M A\left(\left\{D_{t}\right\}, m\right)}}
-$$
-As for the value of m, we again use 50, 100 and 250 days.
+\]
+As for the value of $m$, we again use $50, 100$ and $250$ days.
 
-Combining all of the features mentioned above, we use them for statistical learning.
+Combining all of the features mentioned above, we use them for our statistical learning approach to predicting the prices. 
 
 \subsection{LSTM}
 
