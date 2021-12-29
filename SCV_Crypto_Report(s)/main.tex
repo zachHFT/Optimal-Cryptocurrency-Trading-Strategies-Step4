@@ -1047,7 +1047,7 @@ In figure \ref{fig:LSTM PNL} we display realisation of our prediction strategy v
 \begin{figure}
     \centering
     \includegraphics[scale = 0.528]{Images/pnl for linear regression.png}
-    \caption{PNL evolution of ordinary least square, lasso and ridge regression model and baseline. We put them together as they are all linear regression based methods. It can be seen that all these three methods outperform the baseline in the long run, while ridge regression has the highest return in the end. We also notice that even though the Lasso is worse than the baseline for a majority of time, It has a very low retracement.}
+    \caption{PNL evolution of our trading strategy using prediction from OLS, lasso and ridge regression models and a baseline. All models beat the baseline in the long-run.}
     \label{fig:LR PNL}
 \end{figure}
 
@@ -1056,7 +1056,7 @@ In figure \ref{fig:LSTM PNL} we display realisation of our prediction strategy v
 \begin{figure}
     \centering
     \includegraphics[scale = 0.6]{Images/PNL SVM RF.png}
-    \caption{PNL evolution of random forest and SVM model. Notice that the SVM model is much better than the random forest method according to the final return. It is worth mentioning that the SVM model is very nice in the second half of the testing data}
+    \caption{PNL evolution of random forest and SVM model. We observe better than the baseline performance again here; the SVM model shows a very healthy growth in the second half of the testing data}
     \label{fig:SVMRF PNL}
 \end{figure}
 
@@ -1064,7 +1064,9 @@ In figure \ref{fig:LSTM PNL} we display realisation of our prediction strategy v
 
 
 \subsection{Discussion and analysis}
-For all of the methods we have, they perform better than the baseline strategy and is able to earn more money. At beginning, our guess is that this backtesting return should be related to the RMSE. As the smaller the RMSE is, the closer our prediction is, we guess that lower RMSE leads to a higher final return. However, we saw that the LSTM model has the largest final return while it has the largest RMSE. On the other hand, the SVM model has the lowest RMSE while it has the second largest final return. Notice that the Ordinary least square linear regression has the second smallest RMSE but has the lowest final return. From these results, we think it's hard to find a direct relationship between final PNL and the RMSE of a model.
+On the data set we used our prediction strategy, the we achieved promising returns. In figure (\ref{fig:LR PNL}) we see that all regression based methods outperform the baseline in the long run, while ridge regression has the highest return in the long-run. We also notice that even though the Lasso is worse than the baseline for a majority of time, it appears to increase for longer stretches of time than the other methods. Moreover, in figure (\ref{fig:SVMRF PNL}) we notice that the SVM method works better with the strategy than the random forest method according to the final return.\\
+
+For all of the methods we have, they perform better than the baseline strategy and are able to generate profit. One might imagine that these PnL scores should be related to the RMSE. The smaller the RMSE is, the closer our prediction is, we guess that lower RMSE leads to a higher final return. However, we saw that the LSTM model has the largest final return while it has the largest RMSE. On the other hand, the SVM model has the lowest RMSE while it has the second largest final return. Notice that the ordinary least squares linear regression has the second smallest RMSE but has the lowest final return. Indeed, while RMSE is a useful statistic in measure the correctness of a predictive function, in the case of financial time series, the deviations at each time point play an important role in the generation of large profits and averaging them out loses this magnified view that we might desire, so as to find a relationship between the correctness of a model and its profit making abilities. 
 
 
 
