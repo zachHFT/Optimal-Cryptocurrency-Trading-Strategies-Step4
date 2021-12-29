@@ -416,7 +416,7 @@ We merge price data obtained from Binance with the dataframe containing informat
 \end{table}
 
 
-\subsection{Statistical Analysis}
+\subsubsection{Statistical Analysis}
 We will investigate the strength of correlation between \code{opcl} and other features. If we find some strong correlations between \code{opcl} and some features, we can use that fact to inform a great trading price within a day. In order to do that, we use python to calculate the Pearson's correlation between them. Unfortunately, we can't find any features that strong correlate with the \code{opcl}. As can be seen from figure (\ref{medium stats}), the correlations between all the features and \code{opcl} are small. The abosolute value of them are less than 0.4, which means there is no correlations or weak correlations. Therefore, we cannot use this correlation result directly to develop a new strategy.
 
 \begin{figure}[!htbp]
@@ -889,7 +889,7 @@ where $C_t$ is the close price at time $t$. This can be interpreted as an indica
 
 
 \subsubsection{Commodity Channel Index}
-The Commodity Channel Index (CCI) is defined as:
+The Commodity Channel Index (CCI) is defined by:
 \[
 X_{t}=\frac{C_{t}+H_{t}+L_{t}}{3},
 \]
@@ -989,25 +989,23 @@ where the initial values are $c_{0}=0$ and $h_{0}=0$ and the operator o denotes 
 
 
 \subsection{Prediction and Backtesting}
-After introducing these methods, we implemented them and developed strategies to earn extra money. At first, we introduce the dataset we use and how we preprocess them. 
+By applying the methods introduced in this chapter, we then developed trading strategies and assessed their performance. Firstly, we introduce the data we used and how we preprocessed them. 
 
-The data set we used to train the model is the Kyber Network trading data. But here the data is more granular, here we use 1 hour trading data in lieu of 1 day data to train the model and test the accuracy of our model.  We split the one hour trading data into two parts. The first 80 percent of data is used as training dataset, while the rest 20 percent data are used as testing test. For the LSTM model, we keep only two features: \code{Date} and \code{close} (log of close price in an hour). For a certain data, we use the close price of previous 60 data as input and the close price of that certain data as output.   Please see section (\ref{sec:medium}) for the implementation details.For other machine learning models, we use all features we obtained from Feature engineering part. For a certain data, we use the features we got above and the close price of the previous 10 data as input and the same features of that certain data as output.
+The data we used to train the model is the Kyber Network trading data used in section \ref{sec:medium}. However, here the data is more granular; we use 1 hour trading data in lieu of 1 day data to train the model and test the accuracy of our model.  We split the one hour trading data into two parts. The first 80 percent of data is used as training dataset, while the remaining 20 percent data are used as testing test. For the LSTM model, we keep only two features: \code{Date} and \code{close} (log of close price in an hour). For a certain data, we use the close price of previous 60 data as input and the close price of that certain data as output. Please see section (\ref{sec:medium}) for details. For other machine learning models, we use all features we obtained from section \ref{sec:feateng}. 
+
+%For certain data, we use the features we got above and the close price of the previous 10 data as input and the same features of that certain data as output.
 
 
 In order to compare the performances of these models, we need to define a way of giving a numerical score to the the performance of our models. We will use the Root Mean Square Error (RMSE) statistic
-\[\textrm{RMSE} =\sqrt{\frac{\sum_{i=1}^{N}\|y(i)-\hat{y}(i)\|^{2}}{N}},\] where $N$ is the number of data points, $y(i)$ is the i-th measurement of actual data, and $\hat{y}(i)$ is its corresponding prediction.\\
-In machine learning, it is extremely helpful to have a single number to judge a model’s performance, whether it be during training, cross-validation, or monitoring after deployment. Root mean square error is one of the most widely used measures for this. It is a proper scoring rule that is intuitive to understand and compatible with some of the most common statistical assumptions \cite{hyndman2006another}. This statistic measures the Euclidean distance between our prediction and our model, the aim is to get this figure as low as possible, offering an analogy to correctness.  
+\[\textrm{RMSE} =\sqrt{\frac{\sum_{i=1}^{N}\|y(i)-\hat{y}(i)\|^{2}}{N}},\] where $N$ is the number of data points, $y(i)$ is the i-th measurement of actual data, and $\hat{y}(i)$ is its corresponding prediction. In machine learning, it is extremely helpful to have a single number to judge a model’s performance, whether it be during training, cross-validation, or monitoring after deployment. Root mean square error is one of the most widely used measures for this. It is a proper scoring rule that is intuitive to understand and compatible with some of the most common statistical assumptions \cite{hyndman2006another}. This statistic measures the Euclidean distance between our prediction and our model, the aim is to get this figure as low as possible, offering an analogy to correctness.  
 
-After using grid search to tune the hyperparameters, we trained a model with our training data. After obtaining the model we train, we do the same processing for the testing data and do the prediction.
-See table \ref{tab:RMSE} for the details of the RMSE given by these models. See figure (\ref{fig:LSTM price}) to find out the prediction of LSTM model. We see that the prediction is not changing that drastically compared with the ground truth. Another example is from the ordinary least square linear regression. Please see figure \ref{fig:OLS price} for the prediction of Ordinary least square linear regression. 
-
-
+After using grid search to tune the hyperparameters, we trained a model with our training data. After obtaining the model we train, we do process the testing data and work out the prediction. In table \ref{tab:RMSE} we record the RMSE statistic obtained from these models. Figure (\ref{fig:LSTM price}) shows that the prediction obtained using LSTM deviates noticeably from the known prices, but retains the trajectory. That said, its performance is not as good as that which we obtain from OLS regression as we see that its RMSE value is smaller. Figure (\ref{fig:OLS price}) shows this prediction.
 \begin{table}[]
     \centering
     \begin{tabular}{|c|c|}
     \hline
         Model & RMSE\\ \hline
-         OLS Linear Regression& 0.013         \\
+         OLS Regression& 0.013         \\
          Lasso& 0.026\\
          Ridge Regression& 0.028\\
          Support Vector Machine& 0.011      \\
@@ -1015,7 +1013,7 @@ See table \ref{tab:RMSE} for the details of the RMSE given by these models. See 
          LSTM & 0.056\\
     \hline
     \end{tabular}
-    \caption{RMSE for different models. As can be seen here, the linear SVM has the lowest RMSE, while the LSTM has the highest RMSE. These values are relatively small, which means that our predictions are close to the ground truth value}
+    \caption{RMSE for different models. As can be seen here, the linear SVM has the lowest RMSE, while the LSTM has the highest RMSE. These values are relatively small, which means that our predictions are close the actual prices.}
     \label{tab:RMSE}
 \end{table}
 
@@ -1023,31 +1021,33 @@ See table \ref{tab:RMSE} for the details of the RMSE given by these models. See 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[scale = 0.65]{Images/OLS price prediction.png}
-    \caption{Price of ordinary least squre linear regression. It can be seen from the figure that our prediction are very very close to the ground truth expect for a few points.}
+    \caption{Price prediction via ordinary least squares linear regression. The prediction is very close to the actual prices save for a few points.}
     \label{fig:OLS price}
 \end{figure}
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[scale = 0.5]{Images/LSTM price.png}
-    \caption{Price of LSTM prediction and the ground truth. It can be seen that our prediction has similar trend to the Ground Truth but not changing that drastically}
+    \caption{Price prediction via LSTM. The trajectory is similar however there are more noticeable deviations from actual values.}
     \label{fig:LSTM price}
 \end{figure}
 
+\begin{strategy}[Kyber Next $s$]
+This strategy is a generalisation of the Kyber Next Day strategy of section (\ref{sec:medium}). Indeed, if we predict that price at next $s$ is higher and we don't have KNC right now, then we buy the KNC. If our model predict that the price at next $s$ is lower and we have KNC right now, then we sell the price right now. In this section we set $s = \text{hour}$.
+\end{strategy}
 
-When predicting is over, it's time to develop a strategy. The strategy is direct and simple: if we predict that price at next hour is higher and we don't have KNC right now, then we buy the KNC. If our model predict that the price at next hour is lower and we have KNC right now, then we sell the price right now. We implemented this strategy and did backtesting for all of these models.
-Figure \ref{fig:LSTM PNL} for the realisation of our backtesting of LSTM. It can be seen that our strategy works nicely and outperforms the baseline in the long run in our testing dataset. Indeed, based on the historical data we are using, our model is most accurate only during a short period of time which coincides with time indices (hours) 1500-2000. Compare this with much earlier in the data set where the prediction gives a significant underestimate. In period predicted with greater accuracy, our strategy is able to earn much money. But in the other time, our model is not much better, performs similar to the market. Overall, our strategy gives us a higher return.
+In figure \ref{fig:LSTM PNL} we display realisation of our prediction strategy via LSTM. It can be seen that our strategy works nicely and outperforms the baseline in the long run in our testing dataset. Indeed, based on the historical data we are using, our model is most accurate only during a short period of time which coincides with hours $1500-2000$. Compare this with much earlier in the data set where the prediction gives a significant underestimate. In period predicted with greater accuracy, our strategy is able to earn much money. But in the other time, our model is not much better, performs similar to the market. Overall, our strategy gives us a higher return.
 \begin{figure}[!ht]
     \centering
     \includegraphics[scale = 0.7]{Images/LSTM PNL.png}
-    \caption{PNL evolution of LSTM model and baseline. It can be seen that at beginning , our strategy perform worse than the baseline. However, our strategy performs much better during the oscillation of the KNC price.}
+    \caption{PNL evolution of LSTM model and baseline. It can be seen that at beginning, our strategy perform worse than the baseline. However, our strategy performs much better during the oscillation of the KNC price.}
     \label{fig:LSTM PNL}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[scale = 0.528]{Images/pnl for linear regression.png}
-    \caption{PNL evolution of ordinary least square, lasso and ridge regression model and baseline. We put them together as they are all linear regression based methods. It can be seen that all these three methods outperform the baseline in the long run, while ridge regression has the highest return in the end. We also notice that even though the Lasso is worse than the baseline for a majority of time, It has a very low retracement.  }
+    \caption{PNL evolution of ordinary least square, lasso and ridge regression model and baseline. We put them together as they are all linear regression based methods. It can be seen that all these three methods outperform the baseline in the long run, while ridge regression has the highest return in the end. We also notice that even though the Lasso is worse than the baseline for a majority of time, It has a very low retracement.}
     \label{fig:LR PNL}
 \end{figure}
 
