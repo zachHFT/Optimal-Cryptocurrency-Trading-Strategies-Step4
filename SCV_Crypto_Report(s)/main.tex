@@ -381,6 +381,8 @@ Scrape the twitter account "WhaleTrades" looking for both the appearance of "\$E
 
 If we compare the PnL in Figure (\ref{fig: wwPnL}) to other strategies, we observe a healthy improvement here. We may take this as an indication that markets are heavily manipulated, meaning more savvy retail buyers can leverage this buy following media to make profits, while the market makers take advantage of poor decisions by layman retail buyers to continue their market manipulation strategies.
 
+\subsection{Discussion}
+
 \section{Medium}\label{sec:medium}
 Medium is an American online publishing platform developed by Evan Williams and launched in August 2012. The platform gives its members the ability to read and participate in social journalism, having a hybrid collection of amateur and professional people and publications. The site is regularly regarded as a blog hosting platform \cite{streitfeld2017internet}.
 
@@ -448,6 +450,8 @@ We compare the two strategies with a baseline, which is the simplest strategy: b
 \end{figure}
 
 Clearly, the naïve do nothing strategy is sub-optimal. We see that this strategies perform very well between day 80 to day 200, where the price of Kyber drops drastically. However, they couldn't escape the big crash on day 475, and the two strategies suffer a great loss during this time. In conclusion, these two simple strategies outperform the baseline, while the second strategy performs the best.
+
+\subsection{Discussion}
 
 \section{Reddit}\label{reddit}
 Reddit is the Internet's forum. It serves as a hub for discussion on just about anything you can think of. Naturally, therefore, cryptocurrency enthusiasts will discuss trends, advice and more in the many dedicated fora on the site such as 'r/Cryptocurrecy' or 'r/Bitcoin'. For this reason, it is not hard to imagine that there are more prominent members of the community who feature across several fora and make frequent contributions to the community. Over time, these people may gain a reputation for some type of expertise. Such people, like in the Twitter section, we will call  \textbf{influencers}. 
@@ -652,7 +656,7 @@ To conclude, we calculate from $1000$ samples the bootstrapped $95\%$ confidence
 This analysis is of course limited. For example, we didn't consider the content of the posts, and we performed the analysis of a relatively short time frame. But this is analysis is intended to be informative. Going further, we would aim to continue this analysis for various authors and various (longer) time frames to build a much more comprehensive strategy which encompasses all the information we glean from that analysis, nevertheless, what we observe here is promising, and certainly supports the use of network modelling to identify important members of communities. Moreover, in an even more precise analysis, it would serve to organise posts by words mentioned in them, then we can make decisions based on the content of posts and not their existence alone.
 
 %{\color{red} TO ADD: some form of discussion }
-
+\subsection{Discussion}
 
 \chapter{Prediction Based Methods}
 \section{Causality between time series}
@@ -729,7 +733,7 @@ Note that this strategy is built on the pricnicple that more of than not,  Ether
     \label{fig:backtested_strategy_2}
 \end{figure}
 
-
+\subsection{Discussion}
 
 \section{Machine Learning Approach}
 Machine learning (ML) is a type of artificial intelligence (AI) that build models to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. Recently, machine learning performs nicely in various prediction tasks in various areas. Here we will use machine learning techniques to predict, or \textbf{forecast}, the price of cryptocurrencies.
@@ -1063,7 +1067,7 @@ In figure \ref{fig:LSTM PNL} we display realisation of our prediction strategy v
 
 
 
-\subsection{Discussion and analysis}
+\subsection{Discussion}
 On the data set we used our prediction strategy, the we achieved promising returns. In figure (\ref{fig:LR PNL}) we see that all regression based methods outperform the baseline in the long run, while ridge regression has the highest return in the long-run. We also notice that even though the Lasso is worse than the baseline for a majority of time, it appears to increase for longer stretches of time than the other methods. Moreover, in figure (\ref{fig:SVMRF PNL}) we notice that the SVM method works better with the strategy than the random forest method according to the final return.\\
 
 For all of the methods we have, they perform better than the baseline strategy and are able to generate profit. One might imagine that these PnL scores should be related to the RMSE. The smaller the RMSE is, the closer our prediction is, we guess that lower RMSE leads to a higher final return. However, we saw that the LSTM model has the largest final return while it has the largest RMSE. On the other hand, the SVM model has the lowest RMSE while it has the second largest final return. Notice that the ordinary least squares linear regression has the second smallest RMSE but has the lowest final return. Indeed, while RMSE is a useful statistic in measure the correctness of a predictive function, in the case of financial time series, the deviations at each time point play an important role in the generation of large profits and averaging them out loses this magnified view that we might desire, so as to find a relationship between the correctness of a model and its profit making abilities. 
