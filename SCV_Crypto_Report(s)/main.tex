@@ -171,7 +171,7 @@ Before starting our analysis, the reader should know that, unlike stock markets,
 The data extracted from Binance's API -- using Python to access it -- will contain price data at various time points and intervals for a chosen cryptocurrency. We remark that that we have never encountered any NA values or other seemingly out-of-place values that would need to be rejected. Indeed, so called 'out-of-place values' or any other outliers kind of value are strong indicators which require further investigations and may be relevant to dedicated algorithmic trading strategies. We absolutely do not want to remove them as we may be tempted to do in some other contexts in data science.\\
 
 From time to time, one might find missing time periods in the extracted data. Fo example, every once in a while there is a major crash in cryptocurrencies market (i.e. prices dropping significantly). This leads to a massive amount of people trying to connect to the cryptocurrencies exchange platforms to try to sell (or buy) some cryptocurrencies.This often results in the exchange becoming unavailable, their server not being able to handle so many connections attempts at once. This explains the missing data in historical cryptocurrencies prices data (It can be for a couple of minutes up to a couple of hours). We therefore compute the time difference in days and time difference in minutes between pairs of consectives rows of data to spot any such discrepancies in the timestamp and add these to the data set. For example, in a 1-hour dataset we expect that time difference between line i and line i-1 to be 60 min, if, say, it appears to be 57 minutes, we know there was a crash that occured and therefore can decide our strategy testing programme to not consider (i.e. to pause) this very particular time period. It is a useful method to rigoursly proceed to strategy testing algorithm. 
-Although, for the purposes of statistical analysis this discrepancy can be problematic. One way to circumvent this issue is to \textbf{impute} the time series, and there are software packages available to do this. For example, in section \ref{reddit} on Reddit networks, an R package called \code{imputeTS} is used to do this, with the function \code{na\_kalman} which replaces \code{NA} values in the dataset using nearby values by Kalman Smoothing \cite{KalmanFilter}. This method is one of the most recommended in the package.
+Although, for the purposes of statistical analysis this discrepancy can be problematic. One way to circumvent this issue is to \textbf{impute} the time series, and there are software packages available to do this. For example, in section \ref{sec:reddit} on Reddit networks, an R package called \code{imputeTS} is used to do this, with the function \code{na\_kalman} which replaces \code{NA} values in the dataset using nearby values by Kalman Smoothing \cite{KalmanFilter}. This method is one of the most recommended in the package.
 
 \begin{figure}[H]
     \centering
@@ -270,6 +270,26 @@ Youtube is the most dominant streaming platform worldwide. Many Youtube channles
 $M USD) historical prices and data are hard to access and each require APIs from numerous cryptocurrency exchanges. Therefore, we will confine ourselves here to a general trend analysis of popular crypto Youtube channels.
 First we seek to figure out the search trends of Youtube, using Pytrends, an API for Google Trends, which allows us to retrieve the trending on Google search engines, including Youtube. We get the most trending queries on Youtube for the word 'Cryptocurrency'. From these we see four popular cryptocurrencies channel stand out, namely: Bitboy Crypto, Banter Crypto, Jrny Crypto, and Crypto Zombie. Figures (\ref{youtube_channel_crypto_trends}-\ref{countries_map_2}) visualises the interest over time and geography in each of these channels.
 
+Knowing the importance and impact media news can have on traditional finance (e.g. sudden surge or drop in stock prices), one can expect similar pattern to occur with cryptocurrencies. The analysis below indeed tends to prove so.
+
+Indeed, inspired by the work of u/myphoneislaggy on Reddit \cite{reddit_coinbureau_analysis}, we will consider a similar but slightly different framework. We analyse the popular Youtube channel Coinbureau and their videos 'Top crypto picks'.
+
+These videos contains a list of 3-10 cryptocurrencies listed as potential gainers. Some important cryptocurrencies such as Ethereum, Cardano, etc (with marketcap $>$ 10B USD) and some smaller cryptocurrencies such as Tornado Cash (with marketcap $<$ 100M USD). This is a minimum 1000x difference in marketcap between the two categories (small vs. big marketcap). 
+
+We assume that, if information such as a Youtube video can have an impact on the price of a cryptocurrency, the larger the smaller the marketcap, the bigger the impact (and potential increase in price) can be. Indeed, we expect little to no impact on the price of Bitcoin for example (its marketcap being simply too big).
+
+For each of these videos, we therefore select the one cryptocurrency with the smaller marketcap. We assume we buy it at the open price of the day the video was published, and sell at the closing price of the same day.
+\\ \\
+\underline{Note:} This assumption is wrong to some extent as it falsely assumes that we can knowingly buy the crypto prior to the video being released. For the sake of simplicity though, we still consider this approach, It is indeed still very informative to the extent that obisous increases are noticeable. To go further, one would want to extract 1-minute dataset to backtest our strategy with more refinements, and more precision.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale = 0.5]{Images/youtube_coinbureau_pnl.png}
+    \caption{PnL based on Coinbureau's 'Top crypto picks' videos}
+    \label{youtube_coinbureau_pnl}
+\end{figure}
+
 \begin{figure}[!htbp]
     \centering
     \includegraphics[scale = 0.5]{Images/youtube_channel_crypto_trends.png}
@@ -292,14 +312,14 @@ First we seek to figure out the search trends of Youtube, using Pytrends, an API
 \end{figure}
 
 
-\section{Twitter}
+\section{Twitter}\label{sec:twitter}
 Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets". Users can post, like, and share (or retweet) tweets. Millions of people from a wide variety of positions and backgrounds react and share their opinions on the platform. This includes people of great significance  and influence within society, for example the former president of the US, Donald Trump, used Twitter extensively to communicate with the American citizens during his mandate.
 
 One finds that some individuals are very aware of the impact they have on social media and often use their influence unreservedly. Elon Musk, a very well-known serial entrepreneur and founder of Tesla, who is also the richest man on the planet, has been heavily criticized for his influence on a few cryptocurrency stocks. %He has embraced his role and was proclaimed the Doge Father by the crypto community in reference to the cryptocurrency Dogecoin. He has been creating immense moves (both up and down) of price charts with his tweets.
 
 \subsection{Twitter strategy: Elon Musk}
 Elon Musk's tweets unquestionably have great power. To create great profit inducing trading strategies it serves to try and quantify the power influencers like Elon Musk possess. In this section we will explore a simple trading strategy applied to BTCUSDT and DOGEUSDT currency pairs: \begin{strategy}[Elon Musk]
-Buy $1000\text{\$}$ whenever Elon musk tweets about a given cryptocurrency and hold this position for 24 hours. Once the 24 hour period has ended, sell the stock.
+Buy $\$1000$ whenever Elon musk tweets about a given cryptocurrency and hold this position for 24 hours. Once the 24 hour period has ended, sell the stock.
 \end{strategy}\label{strat:musk} 
 We will visualise the effectiveness of this strategy through the \textbf{profit and loss} (PnL) generated by this strategy. If our portfolio (number and type of quantities traded) has value $V_t$ for $t$ an index of time, then the sequence $(V_t)_{t=0}^T$ for some end-time $T$ is called the profit and loss of the portfolio through time.
 
@@ -453,7 +473,7 @@ Clearly, the naïve do nothing strategy is sub-optimal. We see that this strateg
 
 \subsection{Discussion}
 
-\section{Reddit}\label{reddit}
+\section{Reddit}\label{sec:reddit}
 Reddit is the Internet's forum. It serves as a hub for discussion on just about anything you can think of. Naturally, therefore, cryptocurrency enthusiasts will discuss trends, advice and more in the many dedicated fora on the site such as 'r/Cryptocurrecy' or 'r/Bitcoin'. For this reason, it is not hard to imagine that there are more prominent members of the community who feature across several fora and make frequent contributions to the community. Over time, these people may gain a reputation for some type of expertise. Such people, like in the Twitter section, we will call  \textbf{influencers}. 
 
 But how can we identify such people? Reddit is largely anonymous, and many important members of the community aren't as easily identifiable as Elon Musk. Therefore, it is important to not treat this question subjectively, since that could lead to the omission of potentially important authors whose contributions to the network of crypto traders have been valued. Consequently, we make a superficial\footnote{due to time constraints} use of network science to locate these users. 
@@ -653,43 +673,49 @@ $\lambda_{m,2}$ & $0.024$ & $0.687$ \\
 
 To conclude, we calculate from $1000$ samples the bootstrapped $95\%$ confidence intervals for the mean of each set of PnL data. For hourly and minute-wise data respectively they are the following: $(980.916, 982.677)$ and $(1006.420, 1006.478)$. We remark that the former does not contain the estimated mean of the distribution but the lower limit is indeed very close to it. More noticeably, the former interval does not contain $1000$, so we tend to underperform with an hourly approach.
 
-This analysis is of course limited. For example, we didn't consider the content of the posts, and we performed the analysis of a relatively short time frame. But this is analysis is intended to be informative. Going further, we would aim to continue this analysis for various authors and various (longer) time frames to build a much more comprehensive strategy which encompasses all the information we glean from that analysis, nevertheless, what we observe here is promising, and certainly supports the use of network modelling to identify important members of communities. Moreover, in an even more precise analysis, it would serve to organise posts by words mentioned in them, then we can make decisions based on the content of posts and not their existence alone.
+
 
 %{\color{red} TO ADD: some form of discussion }
 
-\subsection{Crypto Index & Sentiment Index}
-The CRIX (CRyptocurrency IndeX) was constructed by Trimborn & Härdle (2018) in order to track the entire cryptocurrency market's performance. Cryptocurrencies are taken into account as soon as they check a liquidity condition that insures the conversion of said cryptocurrency to regular currencies (Fiat).
-The formula of this index is as follows:
-$$\text{CRIX}=\frac{\sum_i MC_i}{\text{Divisor}}$$
-Where, MC is the market cap, and the divisor depends on the current supply of each currency.\\
-The idea is to build a sentiment index that will follow the progression of the CRIX to be able to predict the evolution of the market as a whole. \cite{Crix}
-The sentiment index will depend on google search volumes, Reddit posts, Reddit subscriptions and tweets and is computed as follows:
-$$\text{SENT}=0.499 VOL_{Google}+ 0.419VOL_{Tweets} + 0.534 VOL_{RedSub}
-+ 0.539VOL_{RedCmt}$$
-The data was gathered using detection of keywords and platforms like stocktwits it is a social media platform similar to Twitter, but dedicated to financial discussions where investors can express opinions on any financial assets supported by the platform. StockTwits currently
-supports over 532 different cryptocurrencies.\\
-At first more parameters (eg. sentiment of tweets and reddit posts) were selected but were removed to avoid over-fitting \cite{Crix}.\\
 
-To verify the accuracy of these indexes we can check the profit and loss of strategies that rely on them. 
+\subsection{Discussion}
+
+The analysis we have performed using Reddit data is of course limited. For example, we didn't consider the (con)textual content of the posts, and we performed the analysis of a relatively short time frame. But this is analysis is intended to be informative. Going further, we would aim to continue this analysis for various authors and various (longer) time frames to build a much more comprehensive strategy which encompasses all the information we glean from that analysis, nevertheless, what we observe here is promising, and certainly supports the use of network modelling to identify important members of communities. Moreover, in an even more precise analysis, it would serve to organise posts by words mentioned in them, then we can make decisions based on the content of posts and not their existence alone, and we have seen an example of this type of analysis as applied to tweets in section (\ref{sec:twitter}). 
+
+
+
+\section{Cryptocurrency Sentiment Indices}
+Moving forward, we combine the ideas from sentiment analysis performed in section (\ref{sec:twitter}) with the now better appreciated impact of Reddit as analysis in section (\ref{sec:reddit}). The CRIX (CRyptocurrency IndeX) was constructed by Trimborn \& Härdle in 2018, in order to track the entire cryptocurrency market's performance \cite{trimborn_hardle}. The cryptocurrencies considered must first satisfy a liquidity condition that insures the conversion of said cryptocurrency to regular currencies (Fiat).
+CRIX is defined as follows
+\[\textrm{CRIX} =\frac{\sum_i MC_i}{D}\]
+where $MC_i$ is the market cap of cryptocurrency $i$, and the divisor, $D$, is a scaling factor which depends on the current supply of each currency. 
+
+We aim to build a \textbf{sentiment index} --- a scale we can use to predict market trends --- that will follow the progression of the CRIX in order to be able to predict the evolution of the market as a whole \cite{Crix}.
+Our sentiment index, $S$, will depend on the volume of cryptocurrency specific google searches, $V_G$, Reddit activity $V_{R_A}$, Reddit subscriptions $V_{R_S}$ and tweets $V_T$. Initially more parameters such as tweet sentiment were selected but were eventually removed to avoid over-fitting \cite{Crix}. Nevertheless, we have that $S$ is given by
+\[S=0.499 V_{G}+ 0.419V_{T} + 0.534 V_{R_S}
++ 0.539V_{R_A}.\]
+The data was gathered using detection of keywords and platforms like StockTwits. The latter is a social media platform similar to Twitter, but dedicated to financial discussions where investors can express opinions on any financial assets supported by the platform. StockTwits currently
+supports over 532 different cryptocurrencies.[REFERENCE].
+
+To verify the accuracy of these indices we can check the profit and loss of strategies that rely on them. 
 
 \begin{strategy}[CRIX]
- 
+ The rise of the CRIX can be interpreted as a good moment to buy [buy what?] as the whole market is performing better. We can then set a threshold 
 \end{strategy}\label{strat:sent} 
 
 \begin{figure}[!h]
 \begin{minipage}{.5\linewidth}
 \centering
-\subfloat[]{\label{pnl:a}\hspace{-2.5em} \includegraphics[scale=.6]{}}
+\subfloat[]{\label{pnl:a} \includegraphics[scale=.4]{Crix&Sent/crix_0.png}}
 \end{minipage}%
 \begin{minipage}{.5\linewidth}
 \centering
-\subfloat[]{\label{pnl:b}\includegraphics[scale=.6]{}
+\subfloat[]{\label{pnl:b}\includegraphics[scale=.4]{Crix&Sent/crix005.png}}
 \end{minipage}\par\medskip
 \centering
-\caption{(a) Profit and loss from buying blindly after every tweet. (b) Profit and loss with sentiment threshold. Despite the fact that the number of entry has been reduced by a factor of 6, the PnL curve still has the same shape, however has experienced a negative shift (lower highs and lower lows).}
+\caption{(a) Threshold set at 0. (b) Threshold set at 0.05}
 \label{fig:pnl_naji102}
 \end{figure}
-
 
 \subsection{Discussion}
 
