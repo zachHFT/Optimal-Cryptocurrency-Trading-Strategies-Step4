@@ -375,7 +375,7 @@ Scrape the twitter account "WhaleTrades" looking for both the appearance of "\$E
 \begin{figure}[!htbp]
     \centering
     \includegraphics[scale = 0.5]{twitter_scraping/ETH-whales.png}
-    \caption{Profit and loss from the whale watching strategy. Our initial investment is 12 times the the value used in previous experiements. We observe that the drops are controlled.}
+    \caption{Profit and loss from the whale watching strategy. Our initial investment is 12 times the the value used in previous experiments. We observe that the drops are controlled.}
     \label{fig: wwPnL}
 \end{figure}
 
@@ -656,6 +656,41 @@ To conclude, we calculate from $1000$ samples the bootstrapped $95\%$ confidence
 This analysis is of course limited. For example, we didn't consider the content of the posts, and we performed the analysis of a relatively short time frame. But this is analysis is intended to be informative. Going further, we would aim to continue this analysis for various authors and various (longer) time frames to build a much more comprehensive strategy which encompasses all the information we glean from that analysis, nevertheless, what we observe here is promising, and certainly supports the use of network modelling to identify important members of communities. Moreover, in an even more precise analysis, it would serve to organise posts by words mentioned in them, then we can make decisions based on the content of posts and not their existence alone.
 
 %{\color{red} TO ADD: some form of discussion }
+
+\subsection{Crypto Index & Sentiment Index}
+The CRIX (CRyptocurrency IndeX) was constructed by Trimborn & Härdle (2018) in order to track the entire cryptocurrency market's performance. Cryptocurrencies are taken into account as soon as they check a liquidity condition that insures the conversion of said cryptocurrency to regular currencies (Fiat).
+The formula of this index is as follows:
+$$\text{CRIX}=\frac{\sum_i MC_i}{\text{Divisor}}$$
+Where, MC is the market cap, and the divisor depends on the current supply of each currency.\\
+The idea is to build a sentiment index that will follow the progression of the CRIX to be able to predict the evolution of the market as a whole. \cite{Crix}
+The sentiment index will depend on google search volumes, Reddit posts, Reddit subscriptions and tweets and is computed as follows:
+$$\text{SENT}=0.499 VOL_{Google}+ 0.419VOL_{Tweets} + 0.534 VOL_{RedSub}
++ 0.539VOL_{RedCmt}$$
+The data was gathered using detection of keywords and platforms like stocktwits it is a social media platform similar to Twitter, but dedicated to financial discussions where investors can express opinions on any financial assets supported by the platform. StockTwits currently
+supports over 532 different cryptocurrencies.\\
+At first more parameters (eg. sentiment of tweets and reddit posts) were selected but were removed to avoid over-fitting \cite{Crix}.\\
+
+To verify the accuracy of these indexes we can check the profit and loss of strategies that rely on them. 
+
+\begin{strategy}[CRIX]
+ 
+\end{strategy}\label{strat:sent} 
+
+\begin{figure}[!h]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{pnl:a}\hspace{-2.5em} \includegraphics[scale=.6]{}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{pnl:b}\includegraphics[scale=.6]{}
+\end{minipage}\par\medskip
+\centering
+\caption{(a) Profit and loss from buying blindly after every tweet. (b) Profit and loss with sentiment threshold. Despite the fact that the number of entry has been reduced by a factor of 6, the PnL curve still has the same shape, however has experienced a negative shift (lower highs and lower lows).}
+\label{fig:pnl_naji102}
+\end{figure}
+
+
 \subsection{Discussion}
 
 \chapter{Prediction Based Methods}
@@ -1050,7 +1085,7 @@ In figure \ref{fig:LSTM PNL} we display realisation of our prediction strategy v
 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.528]{Images/pnl for linear regression.png}
+    \includegraphics[scale = 0.528]{Machine Learning/PnL_regress_various.png}
     \caption{PNL evolution of our trading strategy using prediction from OLS, lasso and ridge regression models and a baseline. All models beat the baseline in the long-run.}
     \label{fig:LR PNL}
 \end{figure}
