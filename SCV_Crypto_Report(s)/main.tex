@@ -149,7 +149,7 @@ bodyfont=\fontfamily{cmss}\selectfont\itshape,
 \section{Background and scope}
 A cryptocurrency is a tradable digital asset or digital form of money, built on blockchain technology that only exists online. Examples include Bitcoin, Ethereum and Dogecoin. Since its inception in 2008, its popularity has done nothing but grow, leisurely at first, but its popularity has somewhat exploded in recent years. Cryptocurrencies are attractive to many because they are accessible to all, unlike the traditional stock market (until recently). For this reason, their prices are highly susceptible to a variety of factors such as news and social media, much like that of a traditional stock market although perhaps even more sensitive due to the nonexistent perspective of exclusivity -- for example, prices could change due to a trend on Instagram, instead of the more high-level and obscure knowledge of a scandalous exodus of a large company CEO. The aim of this project is to find macro-scale factors which drive fluctuations in cryptocurrency prices and to leverage them in developing profit generating trading strategies. 
 
-Let us breifly offer some technical backgorund. When faced with a given cryptocurrency, what we see on a graph of the \textbf{price} of a currency is the value of a single \textbf{token}. The value of a token is equal to the market cap (total value of the network; denoted MC) of a currency divided by the total circulating supply (number of tokens; denoted CS). For example, Bitcoin has a circulating supply of 19 million tokens but a total supply of 21 million tokens. The difference between the circulating supply and the total supply is the amount still available to be mined, and indicates future inflation. 
+Let us briefly offer some technical background. When considering the value of a given cryptocurrency, what we see on a graph of the \textbf{price} of a currency is the value of a single \textbf{token}. The value of a token is equal to the market cap (total value of the network; denoted MC) of a currency divided by the total circulating supply (number of tokens; denoted CS). For example, Bitcoin has a circulating supply of 19 million tokens but a total supply of 21 million tokens. The difference between the circulating supply and the total supply is the amount still available to be mined, and indicates future inflation. 
 \[\text{Value of a Token}\, =\frac{\text{MC}}{\text{CS}}.\]
 \begin{figure}[!htbp]
     \centering
@@ -157,11 +157,12 @@ Let us breifly offer some technical backgorund. When faced with a given cryptocu
     \caption{The price chart of Bitcoin from 2017 to 2021}
     \label{BTC overall}
 \end{figure}
-In Figure (\ref{BTC overall}), we look at the value of this token in USD over a significant period of time. One realises that Bitcoin prices have been very volatile over the years and this feature is shared by many other cryptocurrencies. Bitcoin went from $10,000$ USD in September 2020 to over $60,000$ USD in April 2021, but also lost half of it's value from April to July 2021. Of course, not all cryptos follow the same trends simultaneously. Some might be rising while others are crashing, and the goal of crypto-trading is to ride the right wave at the right time, and jump off the ship before it sinks. That is why it is sensible to deal with pairs cryptocurrencies to explot the relationships between them.\\
+In Figure (\ref{BTC overall}), we look at the value of this token in USD over a significant period of time. One realises that Bitcoin prices have been very volatile over the years and this feature is shared by many other cryptocurrencies. Bitcoin went from $10,000$ USD in September 2020 to over $60,000$ USD in April 2021, but also lost half of it's value from April to July 2021. Of course, not all cryptos follow the same trends simultaneously. Some might be rising while others are crashing, and the goal of crypto-trading is to ride the right wave at the right time, and jump off the ship before it sinks. 
 
 \section{Aim}
 
-The goal of this project is to proceed to the analysis of an optimal trading (buy-and-sell) strategy for the market of Cryptocurrencies. In particular, we will investigate 4 range of strategies, namely, a first general Exploratory Data Analysis which shall lead us to discover some general historical trends over the days and months of trading (e.g. Thursday is generally a bad day to trade Bitcoin with a negative log-return overall). Secondly, we will investigate how social networks influences cryptocurrencies prices, we will propose buy-and-sell strategies accordingly, and shall backtest the latter. Later on in the project we shall proceed to analysis of cryptocurrencies interactions, cycles, and trends forecasting. We wish to pick the top trending cryptocurrencies right before they actually become top-trending cryptocurrencies. We shall conclude this project with the analysis of extremes fluctuations in price. \\
+The goal of this project is to proceed to the analysis of an optimal trading (buy-and-sell) strategy for the market of cryptocurrencies. To help us identify and tweak our newly developed or adapted srategies, we will try to study trends and bahviours across the market from different perspectives. Initially we will consider a general overview of the market by exploring the raw price data of different cryptocurrency pairs, which we will anticipate shall lead us to discover some general historical trends over the days and months of trading. Moving forward, we will investigate how social networks influences cryptocurrencies prices, we will propose buy-and-sell strategies accordingly, and shall backtest the latter. Later on in the project we shall proceed to analysis of cryptocurrencies interactions, cycles, and trends forecasting. We wish to pick the top trending cryptocurrencies right before they actually become top-trending cryptocurrencies, which gives us an indicator on how and when to act. \\
+
 
 Before starting our analysis, the reader should know that, unlike stock markets, the data for which are extremely onerous to acces, cryptocurrencies data are far less expensive and far more accessible. In particular, we use Binance's (a major cryptocurrency exchange platform) API to extract the historical trading prices of every exchange pair on its platform. It's API allows us to obtain the historical prices over 1 day, 1 hour, and even 1 minute period. We shall obtain open, high, low, close (OHLC) prices for the according period. The trading volume is also provided. We provide further details regarding these data in the next section. A subset of the historical data we use is available at this link: \url{https://drive.switch.ch/index.php/s/URDxQbEv8LqSkB2}.
 
@@ -269,25 +270,24 @@ Unlike the traditional stock market, cryptocurrencies are traded without many re
 Youtube is the most dominant streaming platform worldwide. Many Youtube channles concentrate their content solely on cryptocurrencies, consequently we find that sometimes they impact small market cap cryptocurrencies. In general, low market cap cryptocurrencies (below $10
 $M USD) historical prices and data are hard to access and each require APIs from numerous cryptocurrency exchanges. Therefore, we will confine ourselves here to a general trend analysis of popular crypto Youtube channels.
 First we seek to figure out the search trends of Youtube, using Pytrends, an API for Google Trends, which allows us to retrieve the trending on Google search engines, including Youtube. We get the most trending queries on Youtube for the word 'Cryptocurrency'. From these we see four popular cryptocurrencies channel stand out, namely: Bitboy Crypto, Banter Crypto, Jrny Crypto, and Crypto Zombie. Figures (\ref{youtube_channel_crypto_trends}-\ref{countries_map_2}) visualises the interest over time and geography in each of these channels.
-
-Knowing the importance and impact media news can have on traditional finance (e.g. sudden surge or drop in stock prices), one can expect similar pattern to occur with cryptocurrencies. The analysis below indeed tends to prove so.
-
-Indeed, inspired by the work of u/myphoneislaggy on Reddit \cite{reddit_coinbureau_analysis}, we will consider a similar but slightly different framework. We analyse the popular Youtube channel Coinbureau and their videos 'Top crypto picks'.
-
-These videos contains a list of 3-10 cryptocurrencies listed as potential gainers. Some important cryptocurrencies such as Ethereum, Cardano, etc (with marketcap $>$ 10B USD) and some smaller cryptocurrencies such as Tornado Cash (with marketcap $<$ 100M USD). This is a minimum 1000x difference in marketcap between the two categories (small vs. big marketcap). 
-
-We assume that, if information such as a Youtube video can have an impact on the price of a cryptocurrency, the larger the smaller the marketcap, the bigger the impact (and potential increase in price) can be. Indeed, we expect little to no impact on the price of Bitcoin for example (its marketcap being simply too big).
-
-For each of these videos, we therefore select the one cryptocurrency with the smaller marketcap. We assume we buy it at the open price of the day the video was published, and sell at the closing price of the same day.
 \\ \\
-\underline{Note:} This assumption is wrong to some extent as it falsely assumes that we can knowingly buy the crypto prior to the video being released. For the sake of simplicity though, we still consider this approach, It is indeed still very informative to the extent that obisous increases are noticeable. To go further, one would want to extract 1-minute dataset to backtest our strategy with more refinements, and more precision.
+Knowing the importance and impact media news can have on traditional finance (e.g. sudden surge or drop in stock prices), one can expect similar pattern to occur with cryptocurrencies. The analysis below goes towards this direction.
+Indeed, inspired by the work of u/myphoneislaggy on Reddit \cite{reddit_coinbureau_analysis}, we will consider a similar but slightly different framework. We analyse the popular Youtube channel Coinbureau and their videos 'Top crypto picks'.
+These videos contain a list of 3-10 cryptocurrencies listed as potential gainers. Some important cryptocurrencies such as Ethereum, Cardano, etc (with marketcap $>$ 10B USD) and some smaller cryptocurrencies such as Tornado Cash (with marketcap $<$ 100M USD). This is a minimum 1000x difference in marketcap between the two categories (small vs. big marketcap). 
+We further assume that, if information such as a Youtube video can have an impact on the price of a cryptocurrency, the smaller the marketcap, the bigger the impact (and potential increase in price) can be. Indeed, we expect little to no impact on the price of Bitcoin for example (its marketcap being simply too big).
+\begin{strategy}[Coinbureau]
+For each of these videos, we therefore select the one cryptocurrency with the smaller marketcap. We assume we buy it at the open price of the day the video was published, and sell at the closing price of the same day. We assume that we start with \$1000
+\end{strategy}\label{strat:coinbureau}
 
+\emph{\underline{Note:}} This assumption is limited to some extent as it falsely assumes that we can knowingly buy the crypto prior to the video being released. For the sake of simplicity though, we still consider this approach, for it is indeed still very informative to the extent that obisous increases are noticeable. To go further, one would want to extract 1-minute dataset to backtest our strategy with more refinements, and more precision. Besides, also note that we only take into consideration the cryptocurrencies which are tradeable on Binance and therefore for which we can access their historical prices at the time.
+\\ \\
+This strategy yields an average return of 9.52\%, and our PnL increases, 5 times out of 6, i.e. 83\% of the time. These performances are wonderful and deserves further investigation. In particular, we could seek further entry points by combining the videos of various Youtube channels.
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[scale = 0.5]{Images/youtube_coinbureau_pnl.png}
+    \includegraphics[scale = 0.5]{Images/coinbureau.png}
     \caption{PnL based on Coinbureau's 'Top crypto picks' videos}
-    \label{youtube_coinbureau_pnl}
+    \label{coinbureau}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -470,8 +470,6 @@ We compare the two strategies with a baseline, which is the simplest strategy: b
 \end{figure}
 
 Clearly, the naïve do nothing strategy is sub-optimal. We see that this strategies perform very well between day 80 to day 200, where the price of Kyber drops drastically. However, they couldn't escape the big crash on day 475, and the two strategies suffer a great loss during this time. In conclusion, these two simple strategies outperform the baseline, while the second strategy performs the best.
-
-\subsection{Discussion}
 
 \section{Reddit}\label{sec:reddit}
 Reddit is the Internet's forum. It serves as a hub for discussion on just about anything you can think of. Naturally, therefore, cryptocurrency enthusiasts will discuss trends, advice and more in the many dedicated fora on the site such as 'r/Cryptocurrecy' or 'r/Bitcoin'. For this reason, it is not hard to imagine that there are more prominent members of the community who feature across several fora and make frequent contributions to the community. Over time, these people may gain a reputation for some type of expertise. Such people, like in the Twitter section, we will call  \textbf{influencers}. 
@@ -678,13 +676,11 @@ To conclude, we calculate from $1000$ samples the bootstrapped $95\%$ confidence
 %{\color{red} TO ADD: some form of discussion }
 
 
-\subsection{Discussion}
-
-The analysis we have performed using Reddit data is of course limited. For example, we didn't consider the (con)textual content of the posts, and we performed the analysis of a relatively short time frame. But this is analysis is intended to be informative. Going further, we would aim to continue this analysis for various authors and various (longer) time frames to build a much more comprehensive strategy which encompasses all the information we glean from that analysis, nevertheless, what we observe here is promising, and certainly supports the use of network modelling to identify important members of communities. Moreover, in an even more precise analysis, it would serve to organise posts by words mentioned in them, then we can make decisions based on the content of posts and not their existence alone, and we have seen an example of this type of analysis as applied to tweets in section (\ref{sec:twitter}). 
 
 
 
-\section{Cryptocurrency Sentiment Indices}
+
+\section{Cryptocurrency Sentiment Indices}\label{sec:sentind}
 Moving forward, we combine the ideas from sentiment analysis performed in section (\ref{sec:twitter}) with the now better appreciated impact of Reddit as analysis in section (\ref{sec:reddit}). The CRIX (CRyptocurrency IndeX) was constructed by Trimborn \& Härdle in 2018, in order to track the entire cryptocurrency market's performance \cite{trimborn_hardle}. The cryptocurrencies considered must first satisfy a liquidity condition that insures the conversion of said cryptocurrency to regular currencies (Fiat).
 CRIX is defined as follows
 \[\textrm{CRIX} =\frac{\sum_i MC_i}{D}\]
@@ -695,12 +691,12 @@ Our sentiment index, $S$, will depend on the volume of cryptocurrency specific g
 \[S=0.499 V_{G}+ 0.419V_{T} + 0.534 V_{R_S}
 + 0.539V_{R_A}.\]
 The data was gathered using detection of keywords and platforms like StockTwits. The latter is a social media platform similar to Twitter, but dedicated to financial discussions where investors can express opinions on any financial assets supported by the platform. StockTwits currently
-supports over 532 different cryptocurrencies.[REFERENCE].
+supports over 532 different cryptocurrencies \cite{stocktwits}.
 
 To verify the accuracy of these indices we can check the profit and loss of strategies that rely on them. 
 
 \begin{strategy}[CRIX]
- The rise of the CRIX can be interpreted as a good moment to buy [buy what?] as the whole market is performing better. We can then set a threshold 
+ The rise of the CRIX can be interpreted as a good moment to buy any cryptocurrency as the whole market is performing better. We can then set a threshold for the progression we'd like to see before initiating a buy order. The strategy is implemented on the daily price dataset, and we always sell the day after. 
 \end{strategy}\label{strat:sent} 
 
 \begin{figure}[!h]
@@ -713,11 +709,36 @@ To verify the accuracy of these indices we can check the profit and loss of stra
 \subfloat[]{\label{pnl:b}\includegraphics[scale=.4]{Crix&Sent/crix005.png}}
 \end{minipage}\par\medskip
 \centering
-\caption{(a) Threshold set at 0. (b) Threshold set at 0.05}
-\label{fig:pnl_naji102}
+\caption{(a) Buy when $CRIX_{t} \geq CRIX_{t-1}$  (b) Buy when $ \frac{CRIX_{t}-CRIX_{t-1}}{CRIX_{t-1}}\geq 0.005 $.}
+\label{fig:CRIXpnl}
+\end{figure}
+
+The realisation of the CRIX strategy in Figure (\ref{fig:CRIXpnl}) shows an important trade off between risk and reward as one increases the threshold. Manipulating the threshold will of course change the number of entry points, and as a result change how often we act on information. We saw that we have 6 times the number of entry points for the first strategy but end up with 4 times the portfolio value. Consequently, one must try to mitigate this balance to find the most effective approach.
+
+
+\begin{strategy}[Sentiment index]
+ We can use the same logic of threshold on the sentiment index. When the variation of the sentiment is positive we buy bitcoin.
+\end{strategy}\label{strat:sentindex} 
+
+In Figure (\ref{fig:crixsent}) we see that the strategy looks promising; it appears as if gains in efficiency as time progresses which we may explain by the continuously rising traffic on the internet, which makes our index more reliable.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Crix&Sent/sent0.png}
+    \caption{Realisation of PnL from shorting strategy based on a positive sentiment index. The strategy gains efficiency as time progresses.}
+    \label{fig:crixsent}
+\end{figure}
+Now, if the sentiment index is negative, it tells us that the public has less faith in the value of cryptocurrencies and it is natural to assume that the prices will therefore decrease. We can short Bitcoin when the variation is negative and have twice as many entry points. In Figure (\ref{fig:crixsentlongshort}) we present a realisation of the PnL from this strategy and the portfolio value is steady all along before surging to a higher value than the previous strategy but we end up with roughly the same value at the end of the time period, so this new information did not hugely improve our results. 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Crix&Sent/longshort.png}
+    \caption{Realisation of PnL from shorting strategy based on negative sentiment. We do not notice a huge change in reward here.}
+    \label{fig:crixsentlongshort}
 \end{figure}
 
 \subsection{Discussion}
+
+The analysis we have performed using Reddit data is of course limited. For example, we didn't consider the (con)textual content of the posts, and we performed the analysis of a relatively short time frame. But this is analysis is intended to be informative. Going further, we would aim to continue this analysis for various authors and various (longer) time frames to build a much more comprehensive strategy which encompasses all the information we glean from that analysis, nevertheless, what we observe here is promising, and certainly supports the use of network modelling to identify important members of communities. Moving forward, we would endeavour to include some of the methodology from sentiment indices, seen in the sections (\ref{sec:twitter}) and (\ref{sec:sentind}), as these give a more precise and magnified view of trends. Indeed, in the latter section, we observed some large rewards from trading strategies which make use of this sentiment information. In many cases, activity alone is not enough to determine a trend confidently, since other instigating factors may not be evident. However, upon including contextual indicators from the words themselves used on social media, and perhaps incorporating this into the mathematical network framework we created, we can hope to glean stronger conclusions from the interactions between users on the internet -- for example, communities could be formed through shared opinion, and we could try to investigate whose opinions carry the largest weight. 
 
 \chapter{Prediction Based Methods}
 \section{Causality between time series}
@@ -785,7 +806,7 @@ To conclude, the results verify our intuition. Indeed, Bitcoin prices Granger-ca
 We now present a trading strategy justified by the statistical results of the previous section. We assume, guided by our observations, every time Bitcoin sees a significant drop in price, all other cryptocurrencies see significant drops in turn. \begin{strategy}[Bitcoin drops]
 Whenever Bitcoin experiences a significant drop in price, we buy Ethereum, and sell in the next time period that follows.
 \end{strategy} 
-Note that this strategy is built on the pricnicple that more of than not,  Ethereum experiences an immediate recovery of the price once one observation sees a significant drop. However, it is entriely possible that once the price drops significantly, even more significant drops can occur immediately afterwards. To go further in our analysis, one may wish to consider moving average recovery and price retracement strategies. In Figure (\ref{fig:backtested_strategy_2}) we display the PnL ('Profit-and-Loss') of our strategy, versus a simple buy-and-hold strategy. 
+Note that this strategy is built on the principle that more of than not,  Ethereum experiences an immediate recovery of the price once one observation sees a significant drop. However, it is entriely possible that once the price drops significantly, even more significant drops can occur immediately afterwards. To go further in our analysis, one may wish to consider moving average recovery and price retracement strategies. In Figure (\ref{fig:backtested_strategy_2}) we display the PnL ('Profit-and-Loss') of our strategy, versus a simple buy-and-hold strategy. 
 
 \begin{figure}[!htbp]
     \centering
