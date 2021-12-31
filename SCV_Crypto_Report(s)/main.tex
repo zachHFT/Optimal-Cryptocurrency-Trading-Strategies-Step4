@@ -806,7 +806,7 @@ To conclude, the results verify our intuition. Indeed, Bitcoin prices Granger-ca
 We now present a trading strategy justified by the statistical results of the previous section. We assume, guided by our observations, every time Bitcoin sees a significant drop in price, all other cryptocurrencies see significant drops in turn. \begin{strategy}[Bitcoin drops]
 Whenever Bitcoin experiences a significant drop in price, we buy Ethereum, and sell in the next time period that follows.
 \end{strategy} 
-Note that this strategy is built on the principle that more of than not,  Ethereum experiences an immediate recovery of the price once one observation sees a significant drop. However, it is entriely possible that once the price drops significantly, even more significant drops can occur immediately afterwards. To go further in our analysis, one may wish to consider moving average recovery and price retracement strategies. In Figure (\ref{fig:backtested_strategy_2}) we display the PnL ('Profit-and-Loss') of our strategy, versus a simple buy-and-hold strategy. 
+Note that this strategy is built on the principle that more often than not, Ethereum experiences an immediate recovery of the price once one observation sees a significant drop. However, it is entriely possible that once the price drops significantly, even more significant drops can occur immediately afterwards. To go further in our analysis, one may wish to consider moving average recovery and price retracement strategies. In Figure (\ref{fig:backtested_strategy_2}) we display the PnL ('Profit-and-Loss') of our strategy, versus a simple buy-and-hold strategy. 
 
 \begin{figure}[!htbp]
     \centering
@@ -815,7 +815,10 @@ Note that this strategy is built on the principle that more of than not,  Ethere
     \label{fig:backtested_strategy_2}
 \end{figure}
 
-\subsection{Discussion}
+\subsubsection{Discussion}
+
+Our results in this section are surprising. But perhaps this result in the PnL is 
+
 
 \section{Machine Learning Approach}
 Machine learning (ML) is a type of artificial intelligence (AI) that build models to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. Recently, machine learning performs nicely in various prediction tasks in various areas. Here we will use machine learning techniques to predict, or \textbf{forecast}, the price of cryptocurrencies.
